@@ -54,6 +54,7 @@
                 <i class="ico ico-checkmark-circle"></i>
             </span>
             <h1>{{ @trans("Public_ViewEvent.thank_you_for_your_order") }}</h1>
+            <hr>
             <h2>
                 {{ @trans("Public_ViewEvent.your") }}
                 <a class="ticket_download_link"
@@ -68,6 +69,7 @@
             <div class="content event_view_order">
 
                 @if($event->post_order_display_message)
+                <br><br>
                 <div class="alert alert-dismissable alert-info">
                     {!! nl2br(e($event->post_order_display_message)) !!}
                 </div>
