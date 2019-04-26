@@ -63,6 +63,9 @@
                 {!! Form::hidden('event_id', $event->id) !!}
 
                 <h3> @lang("Public_ViewEvent.your_information")</h3>
+                
+                {{-- Special untranslated text (camp de jour) --}}
+                <p class="help-block"><small>À quel nom devons-nous faire la facturation?</small></p>
 
                 <div class="row">
                     <div class="col-xs-6">
@@ -100,6 +103,10 @@
                     <div class="col-md-12">
                         <div class="ticket_holders_details" >
                             <h3>@lang("Public_ViewEvent.ticket_holder_information")</h3>
+                            
+                            {{-- Special untranslated text (camp de jour) --}}
+                            <p class="help-block"><small>Veuillez indiquer le prénom et nom de l’enfant pour chaque inscription.</small></p>
+                            
                             <?php
                                 $total_attendee_increment = 0;
                             ?>
