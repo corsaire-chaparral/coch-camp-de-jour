@@ -55,19 +55,19 @@
             <div class="btn-group btn-group-responsive">
                 <button data-modal-id='CreateTicket'
                         data-href="{{route('showCreateTicket', array('event_id'=>$event->id))}}"
-                        class='loadModal btn btn-success' type="button"><i class="ico-ticket"></i> @lang("Ticket.create_ticket")
+                        class='loadModal btn btn-primary' type="button"><i class="ico-ticket"></i> @lang("Ticket.create_ticket")
                 </button>
             </div>
             @if(false)
                 <div class="btn-group btn-group-responsive ">
                     <button data-modal-id='TicketQuestions'
                             data-href="{{route('showTicketQuestions', array('event_id'=>$event->id))}}" type="button"
-                            class="loadModal btn btn-success">
+                            class="loadModal btn btn-primary">
                         <i class="ico-question"></i> @lang("Ticket.questions")
                     </button>
                 </div>
                 <div class="btn-group btn-group-responsive">
-                    <button type="button" class="btn btn-success">
+                    <button type="button" class="btn btn-primary">
                         <i class="ico-tags"></i> @lang("Ticket.coupon_codes")
                     </button>
                 </div>
@@ -109,7 +109,7 @@
 
             @foreach($tickets as $ticket)
                 <div id="ticket_{{$ticket->id}}" class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="panel panel-success ticket" data-ticket-id="{{$ticket->id}}">
+                    <div class="panel panel-primary ticket" data-ticket-id="{{$ticket->id}}">
                         <div style="cursor: pointer;" data-modal-id='ticket-{{ $ticket->id }}'
                              data-href="{{ route('showEditTicket', ['event_id' => $event->id, 'ticket_id' => $ticket->id]) }}"
                              class="panel-heading loadModal">
