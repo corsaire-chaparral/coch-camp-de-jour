@@ -83,7 +83,7 @@
                         <div class="panel-heading panel-default">
                             <h3 class="panel-title">
                                 @lang("Dashboard.tickets_sold")
-                        <span style="color: green; float: right;">
+                        <span class="panel-meta-success">
                             {{$event->tickets->sum('quantity_sold')}} @lang("basic.total")
                         </span>
                             </h3>
@@ -100,7 +100,7 @@
                         <div class="panel-heading panel-default">
                             <h3 class="panel-title">
                                 @lang("Dashboard.ticket_sales_volume")
-                                <span style="color: green; float: right;">
+                                <span class="panel-meta-success">
                                     {{money($event->sales_volume + $event->organiser_fees_volume, $event->currency)}}
                                     @lang("basic.total")
                                 </span>
@@ -123,7 +123,8 @@
                         <div class="panel-heading panel-default">
                             <h3 class="panel-title">
                                 @lang("Dashboard.event_page_visits")
-                                <span style="color: green; float: right;">
+                                
+                                <span class="panel-meta-success">
                                     {{$event->stats->sum('views')}} @lang("basic.total")
                                 </span>
                             </h3>
