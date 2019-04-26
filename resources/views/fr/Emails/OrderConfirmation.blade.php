@@ -7,7 +7,9 @@ Votre commande pour <b>{{$order->event->title}}</b> a été prise en compte.<br>
 
 <b>Veuillez prendre note de votre numéro de commande :</b> <span style="font-size:2em; font-weight:bold">{{$order->order_reference}}</span><br><br>
 
-Vos billets sont joints à ce message. Vous pouvez aussi voir les détails de votre commande : {{route('showOrderDetails', ['order_reference' => $order->order_reference])}}
+Vous recevrez bientôt une notification par courriel pour remplir le formulaire d'identification de l'enfant.<br><br>
+
+Vous pouvez consulter les détails de votre commande en ligne : {{route('showOrderDetails', ['order_reference' => $order->order_reference])}}
 
 
 <h3>Détails de la commande</h3>

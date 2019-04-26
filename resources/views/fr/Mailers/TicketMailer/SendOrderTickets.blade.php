@@ -5,7 +5,11 @@ Bonjour,<br><br>
 
 Votre commande pour l'événement <b>{{$order->event->title}}</b> s'est bien passée.<br><br>
 
-Vos billets sont joints à ce message. Vous pouvez aussi voir les détails de votre commande et télécharger vos billets ici : {{route('showOrderDetails', ['order_reference' => $order->order_reference])}}
+<b>Veuillez prendre note de votre numéro de commande :</b> <span style="font-size:2em; font-weight:bold">{{$order->order_reference}}</span><br><br>
+
+Vous recevrez bientôt une notification par courriel pour remplir le formulaire d'identification de l'enfant.<br><br>
+
+Vous pouvez consulter les détails de votre commande en ligne : {{route('showOrderDetails', ['order_reference' => $order->order_reference])}}
 
 @if(!$order->is_payment_received)
 <br><br>
