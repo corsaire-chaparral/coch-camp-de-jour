@@ -351,7 +351,7 @@ class EventCheckoutController extends Controller
             $transaction_data += [
                     'amount'      => $orderService->getGrandTotal(),
                     'currency'    => $event->currency->code,
-                    'description' => 'Order for customer: ' . $request->get('order_email'),
+                    'description' => 'Commande de : ' . $request->get('order_email'),
             ];
 
             //TODO: class with an interface that builds the transaction data.
@@ -612,7 +612,7 @@ class EventCheckoutController extends Controller
                     $attendee = new Attendee();
                     $attendee->first_name = strip_tags($request_data["ticket_holder_first_name"][$i][$attendee_details['ticket']['id']]);
                     $attendee->last_name = strip_tags($request_data["ticket_holder_last_name"][$i][$attendee_details['ticket']['id']]);
-                    $attendee->email = $request_data["ticket_holder_email"][$i][$attendee_details['ticket']['id']];
+                    $attendee->email = $request_data['order_email'];
                     $attendee->event_id = $event_id;
                     $attendee->order_id = $order->id;
                     $attendee->ticket_id = $attendee_details['ticket']['id'];

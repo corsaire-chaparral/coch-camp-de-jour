@@ -20,6 +20,7 @@ $(function() {
                     },
                     error: function(data, statusText, xhr, $form) {
                         $submitButton = $form.find('input[type=submit]');
+                        console.error('Une erreur est survenue', $.parseJSON(data.responseText), statusText);
 
                         // Form validation error.
                         if (422 == data.status) {
@@ -32,6 +33,7 @@ $(function() {
                     },
                     success: function(data, statusText, xhr, $form) {
                         var $submitButton = $form.find('input[type=submit]');
+                        console.log('success', data.responseText);
 
                         if (data.message) {
                             showMessage(data.message);
