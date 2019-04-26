@@ -8,7 +8,9 @@ $is_free_event = true;
                 {{$ticket->title}}
             </span>
             <p class="ticket-descripton mb0 text-muted" property="description">
-                {{$ticket->description}}
+                <small>
+                    {{$ticket->description}}
+                </small>
             </p>
         </td>
         <td style="width:200px; text-align: right;">
