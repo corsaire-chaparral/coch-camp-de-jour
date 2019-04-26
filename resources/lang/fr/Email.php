@@ -10,8 +10,8 @@ return array (
   'message_regarding_event' => 'Message au sujet de : :event',
   'organiser_copy' => '[Copie Organisateur]',
   'refund_from_name' => 'Vous avez reçu un remboursement de :name',
-  'your_ticket_cancelled' => 'Votre billet a été annulé',
-  'your_ticket_for_event' => 'Votre billet pour l\'événement :event',
+  'your_ticket_cancelled' => 'Votre inscription a été annulé',
+  'your_ticket_for_event' => 'Votre inscription pour l\'événement :event',
     //================================== Obsolete strings ==================================//
   'LLH:obsolete' => 
   array (

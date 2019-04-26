@@ -8,7 +8,7 @@ return array (
   'sent_messages' => 'Messages envoyés',
   //==================================== Translations ====================================//
   'all_event_attendees' => 'Tous les participants de l\'événement',
-  'attendees_with_ticket_type' => 'Participants avec un billet de type',
+  'attendees_with_ticket_type' => 'Participants avec un inscription de type',
   'before_send_message' => 'Il sera indiqué au participant d\'envoyer toute réponse à <b>:recipient</b>',
   'content' => 'Contenu du message',
   'date' => 'date',
