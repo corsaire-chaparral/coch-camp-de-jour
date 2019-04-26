@@ -18,6 +18,7 @@
                 <p property="description">
                     {!! nl2br($event->organiser->about)!!}
                 </p>
+                <br>
                 <p>
                     @if($event->organiser->facebook)
                         <a property="sameAs" href="https://fb.com/{{$event->organiser->facebook}}" class="btn btn-facebook">
