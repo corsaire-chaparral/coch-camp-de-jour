@@ -3,9 +3,11 @@
 @section('message_content')
 Bonjour,<br><br>
 
-Votre commande pour l'événement <b>{{$order->event->title}}</b> a été prise en compte.<br><br>
+Votre commande pour <b>{{$order->event->title}}</b> a été prise en compte.<br><br>
 
-Vos billets sont joints à ce message. Vous pouvez aussi voir les détails de votre commande et télécharger vos billets sur : {{route('showOrderDetails', ['order_reference' => $order->order_reference])}}
+<b>Veuillez prendre note de votre numéro de commande :</b> <span style="font-size:2em; font-weight:bold">{{$order->order_reference}}</span><br><br>
+
+Vos billets sont joints à ce message. Vous pouvez aussi voir les détails de votre commande : {{route('showOrderDetails', ['order_reference' => $order->order_reference])}}
 
 
 <h3>Détails de la commande</h3>
