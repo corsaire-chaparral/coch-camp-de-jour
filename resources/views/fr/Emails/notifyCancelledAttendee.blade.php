@@ -4,7 +4,7 @@
 
 <p>Bonjour,</p>
 <p>
-    Votre billet pour l'événement <b>{{{$attendee->event->title}}}</b> a été annulé.
+    Votre inscription pour le <b>{{{$attendee->event->title}}}</b> a été annulé.
 </p>
 
 <p>
