@@ -45,7 +45,7 @@ return array (
   'last_name' => 'Nom',
   'offline_payment_instructions' => 'Instructions pour le paiement hors ligne',
   'offline_payment_methods_available' => 'Méthodes de paiement hors ligne disponible',
-  'order_attendees' => 'Commande participants',
+  'order_attendees' => 'Participants',
   'order_awaiting_payment' => 'Cette commande est en attente de paiement. Merci de lire les instructions ci-dessous pour savoir comment procéder au paiement.',
   'order_details' => 'Détails de la commande',
   'order_items' => 'Éléments de la commande',
