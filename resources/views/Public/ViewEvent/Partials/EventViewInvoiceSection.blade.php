@@ -1,9 +1,8 @@
 <section id="order_form" class="container">
-    <div class="row">
-        <h1 class="section_head">
-            Order Details
-        </h1>
-    </div>
+    <h1 class="section_head">
+        Order Details
+    </h1>
+
     <div class="row">
         <div class="col-md-12">
             <div class="content event_view_order">
