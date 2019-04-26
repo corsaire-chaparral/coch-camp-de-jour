@@ -43,7 +43,7 @@ return array (
   'success' => 'Succès',
   'ticket_design' => 'Conception de l’inscription',
   'tickets' => 'inscriptions',
-    'TOP' => 'TOP',
+    'TOP' => 'Haut',
   'total' => 'total',
   'whoops' => 'Oops !',
   'yes' => 'Oui',
