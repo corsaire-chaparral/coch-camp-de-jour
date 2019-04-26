@@ -137,7 +137,10 @@ class EventAttendeesController extends MyBaseController
         $attendee_first_name = strip_tags($request->get('first_name'));
         $attendee_last_name = strip_tags($request->get('last_name'));
         $attendee_email = $request->get('email');
-        $email_attendee = $request->get('email_ticket');
+        
+        // set same email as order
+        //$email_attendee = $request->get('email_ticket');
+        $email_attendee = $request->get('email');
 
         DB::beginTransaction();
 
@@ -290,7 +293,9 @@ class EventAttendeesController extends MyBaseController
         $ticket_id = $request->get('ticket_id');
         $event = Event::findOrFail($event_id);
         $ticket_price = 0;
-        $email_attendee = $request->get('email_ticket');
+        // don't take ticket email; use same email as order
+        //$email_attendee = $request->get('email_ticket');
+        $email_attendee = $request->get('email');
         $num_added = 0;
         if ($request->file('attendees_list')) {
 
