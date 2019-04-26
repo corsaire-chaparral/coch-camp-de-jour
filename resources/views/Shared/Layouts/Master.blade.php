@@ -12,7 +12,7 @@
     -->
     <title>
         @section('title')
-            Attendize -
+            Camp de jour Corsaire-Chaparral
         @show
     </title>
 

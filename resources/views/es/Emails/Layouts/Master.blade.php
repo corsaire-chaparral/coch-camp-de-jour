@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>
         @section('subject')
-            Email de Attendize.com
+            Courriel Camp de jour Corsaire-Chaparral
         @show
     </title>
 </head>
