@@ -1,9 +1,8 @@
 <section id='order_form' class="container">
-    <div class="row">
-        <h1 class="section_head">
-            @lang("Public_ViewEvent.order_details")
-        </h1>
-    </div>
+    <h1 class="section_head">
+        @lang("Public_ViewEvent.order_details")
+    </h1>
+
     <div class="row">
         <div class="col-md-12" style="text-align: center">
             @lang("Public_ViewEvent.below_order_details_header")

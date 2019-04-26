@@ -1,9 +1,8 @@
 <section id="details" class="container">
-    <div class="row">
-        <h1 class="section_head">
-            @lang("Public_ViewEvent.event_details")
-        </h1>
-    </div>
+    <h1 class="section_head">
+        @lang("Public_ViewEvent.event_details")
+    </h1>
+
     <div class="row">
         <?php /*
         @if($event->images->count())
