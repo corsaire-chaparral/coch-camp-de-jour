@@ -7,7 +7,7 @@ return array (
   //==================================== Translations ====================================//
   'attendee_ref' => 'Réf. participant',
   'coupon_codes' => 'Codes Coupon',
-  'create_ticket' => 'Créer un inscription',
+  'create_ticket' => 'Créer une inscription',
   'demo_attendee_ref' => '#YLY9U73-1',
   'demo_end_date_time' => 'Mar 18th 5:08PM',
   'demo_event' => 'Événement de démo',
