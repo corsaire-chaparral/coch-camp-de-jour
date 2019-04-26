@@ -8,7 +8,7 @@
         <div class="col-md-12" style="text-align: center">
             @lang("Public_ViewEvent.below_order_details_header")
         </div>
-        <div class="col-md-4 col-md-push-8">
+        <div class="col-md-5 col-md-push-7">
             <div class="panel">
                 <div class="panel-heading">
                     <h3 class="panel-title">
@@ -56,7 +56,7 @@
                 {!! @trans("Public_ViewEvent.time", ["time"=>"<span id='countdown'></span>"]) !!}
             </div>
         </div>
-        <div class="col-md-8 col-md-pull-4">
+        <div class="col-md-7 col-md-pull-5">
             <div class="event_order_form">
                 {!! Form::open(['url' => route('postCreateOrder', ['event_id' => $event->id]), 'class' => ($order_requires_payment && @$payment_gateway->is_on_site) ? 'ajax payment-form' : 'ajax', 'data-stripe-pub-key' => isset($account_payment_gateway->config['publishableKey']) ? $account_payment_gateway->config['publishableKey'] : '']) !!}
 
