@@ -46,10 +46,10 @@ return array (
   'refund/cancel' => 'Rembourser / Annuler',
   'status' => 'Statut',
   'sub_total' => 'Sous-total',
-  'ticket' => 'Billet',
+  'ticket' => 'inscription',
   'total' => 'Total',
   'transaction_id' => 'Identifiant de la transaction',
-  'user_registered_n_tickets' => '<a href=":url">:name</a> a enregistré :n billet(s).',
+  'user_registered_n_tickets' => '<a href=":url">:name</a> a enregistré :n inscription(s).',
   'view_order' => 'Voir la commande',
   'view_order_num' => 'Voir la commande #:num',
 );

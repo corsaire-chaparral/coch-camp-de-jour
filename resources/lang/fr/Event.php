@@ -41,7 +41,7 @@ return array (
   'revenue' => 'Revenu',
   'save_changes' => 'Sauvegarder les modifications',
   'showing_num_of_orders' => 'Montre :0 commandes sur un total de <b>:1</b>',
-  'tickets_sold' => 'billets vendus',
+  'tickets_sold' => 'inscriptions vendues',
   'venue_name' => 'Nom de l\'adresse',
   'venue_name_placeholder' => 'Ex. : The Lapin Agile',
   'vis_hide' => 'Cacher l\'événement du public.',

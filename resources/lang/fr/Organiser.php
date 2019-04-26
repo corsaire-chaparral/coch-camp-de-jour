@@ -43,7 +43,7 @@ return array (
   'organiser_facebook' => 'Compte Facebook de l\'organisateur',
   'organiser_facebook_placeholder' => 'Par ex. http://www.facebook.com/MyFaceBookPage',
   'organiser_logo' => 'Logo de l\'organisateur',
-  'organiser_logo_help' => 'Nous recommandons une image carrée, cela rendra mieux sur les billets imprimés et les pages d\'événement.',
+  'organiser_logo_help' => 'Nous recommandons une image carrée, cela rendra mieux sur les inscriptions imprimés et les pages d\'événement.',
   'organiser_menu' => 'Menu organisateur',
   'organiser_name' => 'Nom de l\'organisateur',
   'organiser_name_dashboard' => 'Tableau de bord :name ',
@@ -68,5 +68,5 @@ return array (
   'select_an_organiser' => 'Sélectionner un organisateur',
   'select_organiser' => 'Sélectionner un organisateur',
   'text_color' => 'Couleur de texte',
-  'tickets_sold' => 'Billets vendus',
+  'tickets_sold' => 'inscriptions vendues',
 );

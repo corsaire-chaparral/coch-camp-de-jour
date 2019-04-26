@@ -14,5 +14,5 @@ return array (
   'question_title' => 'Titre de la question',
   'required' => 'Requis',
   'status' => 'Statut',
-  'tickets_list' => 'Billets : :list',
+  'tickets_list' => 'inscriptions : :list',
 );
