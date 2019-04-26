@@ -269,7 +269,8 @@
                                 <td>
                                     {{$attendee->first_name}}
                                     {{$attendee->last_name}}
-                                    (<a href="mailto:{{$attendee->email}}">{{$attendee->email}}</a>)
+                                    {{-- Do not display attendee email (camp de jour) --}}
+                                    {{-- (<a href="mailto:{{$attendee->email}}">{{$attendee->email}}</a>) --}}
                                 </td>
                                 <td>
                                     {{{$attendee->ticket->title}}}
