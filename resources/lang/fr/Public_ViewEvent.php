@@ -27,7 +27,7 @@ return array (
   'currently_not_on_sale' => 'Pas en vente pour l\'instant',
   'cvc_number' => 'Numéro CVC',
   'date' => 'Date',
-  'download_links' => 'Vos <a title=":title" class="ticket_download_link" href=":url">inscriptions</a> et un courriel de confirmation vous ont été envoyés.',
+  'download_links' => 'Un courriel de confirmation vous ont été envoyés.',
   'download_tickets' => 'Télécharger les inscriptions',
   'email' => 'Courriel',
   'email_address' => 'Adresse de courriel',
