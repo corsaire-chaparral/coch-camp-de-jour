@@ -29,18 +29,18 @@
 <div class="col-md-9">
     <div class="btn-toolbar" role="toolbar">
         <div class="btn-group btn-group-responsive">
-            <button data-modal-id="InviteAttendee" href="javascript:void(0);"  data-href="{{route('showInviteAttendee', ['event_id'=>$event->id])}}" class="loadModal btn btn-success" type="button"><i class="ico-user-plus"></i> @lang("ManageEvent.invite_attendee")</button>
+            <button data-modal-id="InviteAttendee" href="javascript:void(0);"  data-href="{{route('showInviteAttendee', ['event_id'=>$event->id])}}" class="loadModal btn btn-primary" type="button"><i class="ico-user-plus"></i> @lang("ManageEvent.invite_attendee")</button>
         </div>
         
         <div class="btn-group btn-group-responsive">
-            <button data-modal-id="ImportAttendees" href="javascript:void(0);"  data-href="{{route('showImportAttendee', ['event_id'=>$event->id])}}" class="loadModal btn btn-success" type="button"><i class="ico-file"></i> @lang("ManageEvent.invite_attendees")</button>
+            <button data-modal-id="ImportAttendees" href="javascript:void(0);"  data-href="{{route('showImportAttendee', ['event_id'=>$event->id])}}" class="loadModal btn btn-primary" type="button"><i class="ico-file"></i> @lang("ManageEvent.invite_attendees")</button>
         </div>
         
         <div class="btn-group btn-group-responsive">
-            <a class="btn btn-success" href="{{route('showPrintAttendees', ['event_id'=>$event->id])}}" target="_blank" ><i class="ico-print"></i> @lang("ManageEvent.print_attendee_list")</a>
+            <a class="btn btn-primary" href="{{route('showPrintAttendees', ['event_id'=>$event->id])}}" target="_blank" ><i class="ico-print"></i> @lang("ManageEvent.print_attendee_list")</a>
         </div>
         <div class="btn-group btn-group-responsive">
-            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                 <i class="ico-users"></i> @lang("ManageEvent.export") <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
@@ -51,7 +51,7 @@
             </ul>
         </div>
         <div class="btn-group btn-group-responsive">
-            <button data-modal-id="MessageAttendees" href="javascript:void(0);" data-href="{{route('showMessageAttendees', ['event_id'=>$event->id])}}" class="loadModal btn btn-success" type="button"><i class="ico-envelope"></i> @lang("ManageEvent.message_attendees")</button>
+            <button data-modal-id="MessageAttendees" href="javascript:void(0);" data-href="{{route('showMessageAttendees', ['event_id'=>$event->id])}}" class="loadModal btn btn-primary" type="button"><i class="ico-envelope"></i> @lang("ManageEvent.message_attendees")</button>
         </div>
     </div>
 </div>

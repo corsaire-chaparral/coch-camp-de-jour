@@ -31,7 +31,7 @@
     <!-- Toolbar -->
     <div class="btn-toolbar" role="toolbar">
         <div class="btn-group btn-group btn-group-responsive">
-            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                 <i class="ico-users"></i> @lang("basic.export") <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
