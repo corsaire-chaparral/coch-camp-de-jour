@@ -66,7 +66,7 @@ class EventCheckoutController extends Controller
         if (!$request->has('tickets')) {
             return response()->json([
                 'status'  => 'error',
-                'message' => 'No tickets selected',
+                'message' => 'Vous devez sélectionner au moins un billet!',
             ]);
         }
 
@@ -176,7 +176,7 @@ class EventCheckoutController extends Controller
         if (empty($tickets)) {
             return response()->json([
                 'status'  => 'error',
-                'message' => 'No tickets selected.',
+                'message' => 'Vous devez sélectionner au moins un billet.',
             ]);
         }
 
