@@ -17,11 +17,11 @@ return array (
   'attendee_cancelled' => 'Annulé',
   'below_order_details_header' => '',
   'below_payment_information_header' => '',
-  'below_tickets' => 'Sélectionnez le nombre d\'inscriptions et cliquez sur «enregistrer». Vous pourrez indiquer le nom de l\'enfant et effectuer le paiement sur l\'écran suivant.',
+  'below_tickets' => 'Sélectionnez le nombre d\'inscriptions et cliquez sur «suivant». Vous pourrez indiquer le nom de l\'enfant et effectuer le paiement sur l\'écran suivant.', // «suivant» => register
   'booking_fee' => 'Frais de réservation',
   'booking_fees' => 'Frais de réservation',
   'card_number' => 'Numéro de carte',
-  'checkout_submit' => 'Enregistrer',
+  'checkout_submit' => 'Placer la commande',
   'confirmation_email' => 'et un message de confirmation vous a été envoyé.',
   'copy_buyer' => 'Copier les détails de l\'acheteur pour tous ceux qui ont des inscriptions',
   'currently_not_on_sale' => 'Pas en vente pour l\'instant',
@@ -59,7 +59,7 @@ return array (
   'quantity_full' => 'Quantité',
   'reference' => 'Référence',
   'refunded_amount' => 'Montant remboursé',
-  'register' => 'Enregistrer',
+  'register' => 'Suivant', // next page 
   'sales_have_ended' => 'Les ventes sont terminées',
   'sales_have_not_started' => 'Les ventes n\'ont pas commencé',
   'send_message_submit' => 'Envoyer message',
