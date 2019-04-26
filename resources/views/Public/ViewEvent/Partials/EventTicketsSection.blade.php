@@ -32,7 +32,7 @@
                                                 {{$ticket->description}}
                                             </p>
                                         </td>
-                                        <td style="width:200px; text-align: right;">
+                                        <td style="width:150px; text-align: right;">
                                             <div class="ticket-pricing" style="margin-right: 20px;">
                                                 @if($ticket->is_free)
                                                     @lang("Public_ViewEvent.free")
