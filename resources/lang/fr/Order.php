@@ -47,7 +47,7 @@ return array (
   'registered' => 'a enregistré',
   'status' => 'Statut',
   'sub_total' => 'Sous-total',
-  'ticket' => 'Inscription',
+  'ticket' => 'inscription',
   'tickets' => 'Inscription(s)',
   'total' => 'Total',
   'transaction_id' => 'Identifiant de la transaction',
