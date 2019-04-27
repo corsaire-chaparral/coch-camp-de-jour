@@ -52,7 +52,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <div class="stat-box">
                 <h3>
                     {{$organiser->events->count()}}
@@ -62,7 +62,7 @@
             </span>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <div class="stat-box">
                 <h3>
                     {{$organiser->attendees->count()}}
@@ -131,7 +131,7 @@
                         </li>
                     @endforeach
                     @else
-                        <div class="alert alert-success alert-lg">
+                        <div class="alert alert-info alert-lg">
                             @lang("Order.no_recent_orders")
                         </div>
                     @endif
