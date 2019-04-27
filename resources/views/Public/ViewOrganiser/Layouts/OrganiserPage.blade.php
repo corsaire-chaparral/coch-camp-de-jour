@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ Lang::locale() }}">
     <head>
         <!--
                   _   _                 _ _
@@ -17,6 +17,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
 
+        <!--Meta-->
+        @include('Shared.Partials.GlobalMeta')
+       <!--/Meta-->
 
         <!-- Open Graph data -->
         <meta property="og:title" content="{{{$organiser->name}}}" />
