@@ -72,6 +72,16 @@
             </span>
             </div>
         </div>
+        <div class="col-sm-4">
+            <div class="stat-box">
+                <h3>
+                    {{ money($organiser->events->sum('sales_volume'), $organiser->account->currency) }}
+                </h3>
+            <span>
+                @lang("Organiser.sales_volume")
+            </span>
+            </div>
+        </div>
     </div>
 
     <div class="row">

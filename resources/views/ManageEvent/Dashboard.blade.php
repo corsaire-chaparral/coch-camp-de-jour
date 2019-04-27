@@ -100,8 +100,13 @@
                         <div class="panel-heading panel-default">
                             <h3 class="panel-title">
                                 @lang("Dashboard.ticket_sales_volume")
+<<<<<<< HEAD
                                 <span style="color: green; float: right;">
                                     {{money($event->sales_volume + $event->organiser_fees_volume, $event->currency)}}
+=======
+                                <span class="panel-meta-success">
+                                    {{money($event->sales_volume, $event->currency)}}
+>>>>>>> dcd171a... Correct sales volume in 2 other files
                                     @lang("basic.total")
                                 </span>
                             </h3>
