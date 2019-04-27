@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ Lang::locale() }}">
     <head>
         <!--
                   _   _                 _ _
@@ -18,6 +18,9 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
         <link rel="canonical" href="{{$event->event_url}}" />
 
+        <!--Meta-->
+        @include('Shared.Partials.GlobalMeta')
+       <!--/Meta-->
 
         <!-- Open Graph data -->
         <meta property="og:title" content="{{{$event->title}}}" />

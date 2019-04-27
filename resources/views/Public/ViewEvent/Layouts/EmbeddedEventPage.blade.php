@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ Lang::locale() }}">
     <head>
         <!--
                   _   _                 _ _
