@@ -42,7 +42,7 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="stat-box">
-                <h3>{{ money($event->sales_volume + $event->organiser_fees_volume, $event->currency) }}</h3>
+                <h3>{{ money($event->sales_volume, $event->currency) }}</h3>
                 <span>@lang("Dashboard.sales_volume")</span>
             </div>
         </div>
@@ -102,6 +102,8 @@
                                 @lang("Dashboard.ticket_sales_volume")
                                 <span class="panel-meta-success">
                                     {{money($event->sales_volume + $event->organiser_fees_volume, $event->currency)}}
+                                <span class="panel-meta-success">
+                                    {{money($event->sales_volume, $event->currency)}}
                                     @lang("basic.total")
                                 </span>
                             </h3>
