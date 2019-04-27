@@ -8,7 +8,7 @@ return array (
   // Defined in file C:\\wamp\\www\\attendize\\resources\\views\\Public\\ViewOrganiser\\Partials\\EventListingPanel.blade.php
   'information' => 'Information',
   // Defined in file C:\\wamp\\www\\attendize\\resources\\views\\Public\\ViewOrganiser\\Partials\\EventListingPanel.blade.php
-  'tickets' => 'inscriptions',
+  'tickets' => 'Inscriptions',
   //==================================== Translations ====================================//
   'no_events' => 'Pas de :panel_title à afficher.',
   'organiser_dashboard' => 'Tableau de bord de l\'organisateur',
