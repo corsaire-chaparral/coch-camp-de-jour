@@ -1,14 +1,5 @@
 
 
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-    #header.navbar {
-        > .navbar-toolbar {
-           background-color: lighten(@attendize-base-color, 15%);
-            color: @white;
-        }
-    }
-}
-
 /* ----------------------------
  *
  * Template Header - screen-md
@@ -38,6 +29,9 @@
                 > .logo-figure {
                     display: inline-block;
                     margin-top: (@header-height-md - 50) / 2;
+                }
+                > .logo-figure {
+                    margin-top: 0;
                 }
             }
         }
@@ -168,7 +162,7 @@
                         display: none;
                     }
                     > .logo-figure {
-                        margin-top: (@header-height-md - 50) / 2;
+                        display: block;
                     }
                 }
             }
@@ -296,7 +290,7 @@
         // Navbar toolbar
         // -----------------------------------
         > .navbar-toolbar {
-            background-color: lighten(@attendize-base-color, 15%);
+            background-color: lighten(@attendize-base-color, 10%);
         }
     }
 }

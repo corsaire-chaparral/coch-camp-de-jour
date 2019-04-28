@@ -38,7 +38,7 @@
 
     <div class="navbar-header">
         <a class="navbar-brand" href="javascript:void(0);">
-            <img style="width: 100%;" class="logo" alt="Attendize" src="{{asset('assets/images/logo-light.png')}}"/>
+            <img class="logo-figure" alt="Club d’athlétisme Corsaire-Chaparral" src="{{asset('assets/images/logo-light.png')}}"/>
         </a>
     </div>
 
