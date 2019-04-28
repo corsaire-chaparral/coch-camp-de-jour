@@ -66,15 +66,39 @@ MANAGE EVENT
     li {
         &.nav-button {
             a {
-                span {
-                    padding:10px;
-                }
+                text-shadow: none;
+                text-overflow: ellipsis;
+                max-width: 300px;
+                white-space: nowrap;
+                overflow: hidden;
             }
         }
     }
 }
 
 
+@media (max-width: @screen-sm) {
+    .nav {
+        li {
+            &.nav-button {
+                a {
+                    max-width: 220px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: @screen-xs) {
+    .nav {
+        li {
+            &.nav-button {
+                a {
+                    max-width: 160px;
+                }
+            }
+        }
+    }
+}
 
 
 /*

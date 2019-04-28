@@ -46,12 +46,12 @@
         @yield('top_nav')
 
         <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown profile">
+            <li class="dropdown profile nav-button">
 
                 <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="meta">
-                        <span class="text ">{{isset($organiser->name) ? $organiser->name : $event->organiser->name}}</span>
+                    <span>
                         <span class="arrow"></span>
+                        {{isset($organiser->name) ? $organiser->name : $event->organiser->name}}
                     </span>
                 </a>
 
