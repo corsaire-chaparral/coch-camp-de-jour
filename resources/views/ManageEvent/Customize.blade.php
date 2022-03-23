@@ -396,7 +396,7 @@
                             </div>
 
                             <div class="panel-footer ar hide">
-                                {!! Form::button(trans("basic.cancel"), ['class'=>"btn modal-close btn-danger",'data-dismiss'=>'modal']) !!}
+                                {!! Form::button(trans("basic.cancel"), ['class'=>"btn modal-close btn-default",'data-dismiss'=>'modal']) !!}
                                 {!! Form::submit(trans("basic.save_changes"), ['class'=>"btn btn-success"]) !!}
                             </div>
 

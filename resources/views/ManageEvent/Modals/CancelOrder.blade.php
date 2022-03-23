@@ -183,7 +183,7 @@
 
             @if($attendees->count() || !$order->is_refunded)
             <div class="modal-footer">
-                {!! Form::button(trans("basic.cancel"), ['class'=>"btn modal-close btn-danger",'data-dismiss'=>'modal'])
+                {!! Form::button(trans("basic.cancel"), ['class'=>"btn modal-close btn-default",'data-dismiss'=>'modal'])
                 !!}
                 {!! Form::submit(trans("ManageEvent.confirm_order_cancel"), ['class'=>"btn btn-primary"]) !!}
             </div>

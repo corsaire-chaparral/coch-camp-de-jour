@@ -29,6 +29,7 @@ return array (
   'event_title' => 'Titre de l\'événement',
   'event_title_placeholder' => 'Ex : conférence internationale de :name',
   'event_visibility' => 'Visibilité de l\'événement',
+  'go_live' => 'L’événement est désormais public! Cela peut être annulé dans les paramètres.',
   'n_attendees_for_event' => '<b>:num</b> participant(s) pour l\'événement : <b>:name</b> (:date)',
   'no_events_yet' => 'Pas encore d\'événement !',
   'no_events_yet_text' => 'On dirait qu\'il vous faut encore créer un événement. Vous pouvez le faire en cliquant sur le bouton ci-dessous.',

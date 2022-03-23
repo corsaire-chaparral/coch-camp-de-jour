@@ -84,7 +84,9 @@
                             <h3 class="panel-title">
                                 @lang("Dashboard.tickets_sold")
                         <span class="panel-meta-success">
-                            {{$event->tickets->sum('quantity_sold')}} @lang("basic.total")
+                            <span class="badge badge-secondary">
+                                {{$event->tickets->sum('quantity_sold')}} @lang("basic.total")
+                            </span>
                         </span>
                             </h3>
                         </div>
@@ -101,8 +103,10 @@
                             <h3 class="panel-title">
                                 @lang("Dashboard.ticket_sales_volume")
                                 <span class="panel-meta-success">
-                                    {{money($event->sales_volume, $event->currency)}}
-                                    @lang("basic.total")
+                                    <span class="badge badge-secondary">
+                                        {{money($event->sales_volume, $event->currency)}}
+                                        @lang("basic.total")
+                                    </span>
                                 </span>
                             </h3>
                         </div>
@@ -125,7 +129,9 @@
                                 @lang("Dashboard.event_page_visits")
                                 
                                 <span class="panel-meta-success">
-                                    {{$event->stats->sum('views')}} @lang("basic.total")
+                                    <span class="badge badge-secondary">
+                                        {{$event->stats->sum('views')}} @lang("basic.total")
+                                    </span>
                                 </span>
                             </h3>
                         </div>

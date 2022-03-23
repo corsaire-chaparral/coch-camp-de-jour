@@ -241,7 +241,7 @@
             </div>
             <div class="modal-footer">
                 <span class="uploadProgress"></span>
-                {!! Form::button(trans("basic.cancel"), ['class'=>"btn modal-close btn-danger",'data-dismiss'=>'modal']) !!}
+                {!! Form::button(trans("basic.cancel"), ['class'=>"btn modal-close btn-default",'data-dismiss'=>'modal']) !!}
                 {!! Form::submit(trans("Event.create_event"), ['class'=>"btn btn-success"]) !!}
             </div>
         </div>
