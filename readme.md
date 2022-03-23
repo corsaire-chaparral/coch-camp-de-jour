@@ -1,3 +1,9 @@
+# Inscription au camp de jour Corsaire-Chaparral
+
+Fork de la plateforme [Attendize](https://github.com/Attendize/Attendize) pour répondre aux besoins spécifiques de l’inscription au camp de jour.
+
+---
+
 <p align="center">
   <img src="http://attendize.website/assets/images/logo-dark.png" alt="Attendize"/>
   <img style='border: 1px solid #444;' src="https://www.attendize.com/images/screenshots/screen1.PNG" alt="Attendize"/>
