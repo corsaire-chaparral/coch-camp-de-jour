@@ -1,6 +1,6 @@
 <?php
 /*************************************************************************
- Generated via "php artisan localization:missing" at 2018/04/18 16:23:42 
+ Generated via "php artisan localization:missing" at 2018/04/18 16:23:42
 *************************************************************************/
 
 return array (
@@ -20,5 +20,5 @@ return array (
   'question_options' => 'Options de la question',
   'question_placeholder' => 'par ex. Merci de saisir votre adresse complète ?',
   'question_type' => 'Type de question',
-  'require_this_question_for_ticket(s)' => 'Exiger une réponse pour le(s) inscription(s)',
+  'require_this_question_for_ticket(s)' => 'Activer cette question pour le(s) inscription(s)',
 );

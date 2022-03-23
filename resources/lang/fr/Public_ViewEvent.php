@@ -20,6 +20,7 @@ return array (
   'below_tickets' => 'Sélectionnez le nombre d\'inscriptions et cliquez sur «suivant». Vous pourrez indiquer le nom de l\'enfant et effectuer le paiement sur l\'écran suivant.', // «suivant» => register
   'booking_fee' => 'Frais de réservation',
   'booking_fees' => 'Frais de réservation',
+  // 'business_details' => ''
   'card_number' => 'Numéro de carte',
   'checkout_submit' => 'Placer la commande',
   'confirmation_email' => 'ainsi qu\'un message de confirmation vous ont été envoyés par courriel.',
@@ -47,8 +48,12 @@ return array (
   'offline_payment_methods_available' => 'Méthodes de paiement hors ligne disponible',
   'order_attendees' => 'Participants',
   'order_awaiting_payment' => 'Cette commande est en attente de paiement. Merci de lire les instructions ci-dessous pour savoir comment procéder au paiement.',
+  'order_date' => 'Date de la commande',
   'order_details' => 'Détails de la commande',
+  'order_email' => 'Courriel de la commande',
   'order_items' => 'Éléments de la commande',
+  'oder_name' => 'Nom de la commande',
+  'order_reference' => 'Référence de la commande',
   'order_summary' => 'Résumé de la commande',
   'organiser_dashboard' => 'Tableau de bord de l\'organisateur',
   'pay_using_offline_methods' => 'Payer via une méthode hors ligne',
@@ -80,4 +85,6 @@ return array (
   'your_message' => 'Votre message',
   'your_name' => 'Votre nom',
   'your' => 'Vos',
+  'stripe_credit_or_debit_card' => 'Carte de crédit ou de débit',
+  'complete_payment' => 'Effectuer le paiement',
 );
