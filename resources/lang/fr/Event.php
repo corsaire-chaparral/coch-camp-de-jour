@@ -14,7 +14,7 @@ return array (
   'address_line_2_placeholder' => 'Ex. : Paris',
   'city' => 'Ville',
   'city_placeholder' => 'Ex. : Paris',
-  'create_event' => 'Créer l\'événement',
+  'create_event' => 'Créer un événement',
   'current_event_flyer' => 'Fascicule pour l\'événement courant',
   'customize_event' => 'Personnaliser l\'événement',
   'delete?' => 'Supprimer ?',

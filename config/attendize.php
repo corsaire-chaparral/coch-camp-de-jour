@@ -23,7 +23,7 @@ return [
     'incoming_email'                => env('MAIL_FROM_ADDRESS'),
 
     'app_name'               => 'Camp de jour Corsaire-Chaparral',
-    'event_default_bg_color' => '#ff6a13',
+    'event_default_bg_color' => '#ff6900',
     'event_default_bg_image' => 'assets/images/public/EventPage/backgrounds/5.jpg',
 
     'event_images_path'      => 'user_content/event_images',

@@ -25,6 +25,8 @@
     <div class="row">
         <div class="col-md-12">
             <h1 property="name">{{$event->title}}</h1>
+
+            <!--
             <div class="event_venue">
                 <span property="startDate" content="{{ $event->start_date->toIso8601String() }}">
                     {{ $event->startDateFormatted() }}
@@ -43,27 +45,27 @@
                     <meta property="address" content="{{ urldecode($event->venue_name) }}">
                 </span>
             </div>
+            -->
 
+            <!--
             <div class="event_buttons">
                 <div class="row">
                     <div class="col-sm-4 col-sm-offset-4">
                         <a class="btn btn-event-link btn-lg" href="{{{$event->event_url}}}#tickets">@lang("Public_ViewEvent.TICKETS")</a>
                     </div>
-                  
-<!--
+
+
                     <div class="col-md-4 col-sm-4">
                         <a class="btn btn-event-link btn-lg" href="{{{$event->event_url}}}#details">@lang("Public_ViewEvent.DETAILS")</a>
                     </div>
--->
-                  
-<!--
+
                     <div class="col-md-4 col-sm-4">
                         <a class="btn btn-event-link btn-lg" href="{{{$event->event_url}}}#location">@lang("Public_ViewEvent.LOCATION")</a>
                     </div>
--->
-                  
+
                 </div>
             </div>
+-->
         </div>
     </div>
 </section>

@@ -181,7 +181,7 @@ class EventCheckoutController extends Controller
         if (empty($tickets)) {
             return response()->json([
                 'status'  => 'error',
-                'message' => 'Vous devez sélectionner au moins un billet.',
+                'message' => 'Vous devez sélectionner au moins une inscription.',
             ]);
         }
 
@@ -231,6 +231,9 @@ class EventCheckoutController extends Controller
                         'event_id'    => $event_id,
                     ]) . '#order_form',
             ]);
+        } else {
+            // got a problem here, no ajax
+echo('event id ' . $event_id);
         }
 
         /*
@@ -421,17 +424,15 @@ class EventCheckoutController extends Controller
             //and sets certain options for the gateway that can be used when the transaction is started
             $gateway->extractRequestParameters($request);
 
-<<<<<<< HEAD
+
             $transaction_data += [
                     'amount'      => $orderService->getGrandTotal(),
                     'currency'    => $event->currency->code,
                     'description' => 'Commande de : ' . $request->get('order_email'),
             ];
-=======
             //generic data that is needed for most orders
             $order_total = $order_service->getGrandTotal();
             $order_email = $ticket_order['request_data'][0]['order_email'];
->>>>>>> upstream/master
 
             $response = $gateway->startTransaction($order_total, $order_email, $event);
 
@@ -660,15 +661,10 @@ class EventCheckoutController extends Controller
                 for ($i = 0; $i < $attendee_details['qty']; $i++) {
 
                     $attendee = new Attendee();
-<<<<<<< HEAD
-                    $attendee->first_name = strip_tags($request_data["ticket_holder_first_name"][$i][$attendee_details['ticket']['id']]);
-                    $attendee->last_name = strip_tags($request_data["ticket_holder_last_name"][$i][$attendee_details['ticket']['id']]);
-                    $attendee->email = $request_data['order_email'];
-=======
+
                     $attendee->first_name = sanitise($request_data["ticket_holder_first_name"][$i][$attendee_details['ticket']['id']]);
                     $attendee->last_name = sanitise($request_data["ticket_holder_last_name"][$i][$attendee_details['ticket']['id']]);
                     $attendee->email = sanitise($request_data["ticket_holder_email"][$i][$attendee_details['ticket']['id']]);
->>>>>>> upstream/master
                     $attendee->event_id = $event_id;
                     $attendee->order_id = $order->id;
                     $attendee->ticket_id = $attendee_details['ticket']['id'];

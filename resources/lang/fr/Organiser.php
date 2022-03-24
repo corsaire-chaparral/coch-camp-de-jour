@@ -1,6 +1,6 @@
 <?php
 /*************************************************************************
- Generated via "php artisan localization:missing" at 2018/04/26 10:16:27 
+ Generated via "php artisan localization:missing" at 2018/04/26 10:16:27
 *************************************************************************/
 
 return array (
@@ -13,7 +13,7 @@ return array (
   'continue_to' => 'Continuer vers',
   'create_an_organiser' => 'Créer un organisateur',
   'create_new_organiser' => 'Créer un nouvel organisateur',
-  'create_organiser' => 'Créer organisateur',
+  'create_organiser' => 'Créer un organisateur',
   'create_organiser_text' => 'Avant de créer des événements, vous devez créer un organisateur. Un organisateur est simplement celui qui organise l\'événement. Cela peut être n\'importe qui, une personne physique ou morale.',
   'current_logo' => 'Logo actuel',
   'customize' => 'Personnaliser',

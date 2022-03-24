@@ -14,11 +14,11 @@
     <link rel="icon" type="image/png" sizes="96x96" href="{{ asset("assets/images/touch/favicon-96x96.png") }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset("assets/images/touch/favicon-16x16.png") }}">
     <link rel="manifest" href="{{ asset("assets/images/touch/manifest.json") }}">
-    <meta name="msapplication-TileColor" content="#ff6a13">
+    <meta name="msapplication-TileColor" content="#ff6900">
     <meta name="msapplication-TileImage" content="{{ asset("assets/images/touch/ms-icon-144x144.png") }}">
     <meta name="application-name" content="Camp de jour Corsaire-Chaparral">
     <meta name="_token" content="{{ csrf_token() }}" />
     {{--Mobile browser theme colors--}}
-    <meta name="theme-color" content="#ff6a13">
-    <meta name="msapplication-navbutton-color" content="#ff6a13">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#ff6a13">
+    <meta name="theme-color" content="#ff6900">
+    <meta name="msapplication-navbutton-color" content="#ff6900">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ff6900">
