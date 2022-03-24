@@ -14,9 +14,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // laravel 5.4 migration causes a well-known issue in the database
+        // setting default string length generally avoids overflowing the allowed size
+        // https://laravel-news.com/laravel-5-4-key-too-long-error
+        Schema::defaultStringLength(191);
     }
-    
+
     /**
      * Register any application services.
      *
