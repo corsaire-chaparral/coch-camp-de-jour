@@ -18,6 +18,7 @@ class OrganiserDashboardController extends MyBaseController
         $organiser = Organiser::scope()->findOrFail($organiser_id);
         $upcoming_events = $organiser->events()->where('end_date', '>=', Carbon::now())->get();
         $calendar_events = [];
+        $gross_revenue = 0;
 
         /* Prepare JSON array for events for use in the dashboard calendar */
         foreach ($organiser->events as $event) {
@@ -28,14 +29,18 @@ class OrganiserDashboardController extends MyBaseController
                 'url'   => route('showEventDashboard', [
                     'event_id' => $event->id
                 ]),
-                'color' => '#4E558F'
+                'color' => '#ff6900'
             ];
+
+            // increase the total revenue
+            $gross_revenue = $gross_revenue + $event->getEventRevenueAttribute();
         }
 
         $data = [
             'organiser'       => $organiser,
             'upcoming_events' => $upcoming_events,
             'calendar_events' => json_encode($calendar_events),
+            'gross_revenue'   => $gross_revenue,
         ];
 
         return view('ManageOrganiser.Dashboard', $data);

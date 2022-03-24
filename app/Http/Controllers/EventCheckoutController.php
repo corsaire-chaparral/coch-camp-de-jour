@@ -223,7 +223,7 @@ class EventCheckoutController extends Controller
          * If we're this far assume everything is OK and redirect them
          * to the the checkout page.
          */
-        if ($request->ajax()) {
+//        if ($request->ajax()) {
             return response()->json([
                 'status'      => 'success',
                 'isEmbedded' => $this->is_embedded,
@@ -231,10 +231,10 @@ class EventCheckoutController extends Controller
                         'event_id'    => $event_id,
                     ]) . '#order_form',
             ]);
-        } else {
-            // got a problem here, no ajax
-echo('event id ' . $event_id);
-        }
+//        } else {
+//            // got a problem here, no ajax
+//echo('request ajax: ' . $request->ajax());
+//        }
 
         /*
          * Maybe display something prettier than this?
@@ -425,11 +425,11 @@ echo('event id ' . $event_id);
             $gateway->extractRequestParameters($request);
 
 
-            $transaction_data += [
-                    'amount'      => $orderService->getGrandTotal(),
-                    'currency'    => $event->currency->code,
-                    'description' => 'Commande de : ' . $request->get('order_email'),
-            ];
+//            $transaction_data += [
+//                    'amount'      => $orderService->getGrandTotal(),
+//                    'currency'    => $event->currency->code,
+//                    'description' => 'Commande de : ' . $request->get('order_email'),
+//            ];
             //generic data that is needed for most orders
             $order_total = $order_service->getGrandTotal();
             $order_email = $ticket_order['request_data'][0]['order_email'];
@@ -664,7 +664,8 @@ echo('event id ' . $event_id);
 
                     $attendee->first_name = sanitise($request_data["ticket_holder_first_name"][$i][$attendee_details['ticket']['id']]);
                     $attendee->last_name = sanitise($request_data["ticket_holder_last_name"][$i][$attendee_details['ticket']['id']]);
-                    $attendee->email = sanitise($request_data["ticket_holder_email"][$i][$attendee_details['ticket']['id']]);
+                    // use order email rather than per-attendee email
+                    $attendee->email = sanitise($request_data['order_email']);
                     $attendee->event_id = $event_id;
                     $attendee->order_id = $order->id;
                     $attendee->ticket_id = $attendee_details['ticket']['id'];

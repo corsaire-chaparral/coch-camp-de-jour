@@ -162,7 +162,7 @@
 
         </div>
         <div class="col-md-3 col-sm-6">
-            <div class="panel panel-success ticket">
+            <div class="panel panel-dark ticket">
                 <div class="panel-body">
                     <i class="ico ico-clock"></i>
                     @if($event->happening_now)
@@ -172,7 +172,7 @@
                     @endif
                 </div>
             </div>
-            <div class="panel panel-success">
+            <div class="panel panel-dark">
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <i class="ico-link mr5 ellipsis"></i>
@@ -185,7 +185,7 @@
                 </div>
 
             </div>
-            <div class="panel panel-success">
+            <div class="panel panel-dark">
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <i class="ico-share mr5 ellipsis"></i>
@@ -267,7 +267,7 @@
 
             </div>
 
-            <div class="panel panel-success hide">
+            <div class="panel panel-dark hide">
 
                 <div class="panel-heading">
                     <h3 class="panel-title">

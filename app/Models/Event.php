@@ -433,6 +433,20 @@ ICSTemplate;
 
         return (new Money($eventRevenue, $currency));
     }
+    /**
+     * @return Float
+     */
+    public function getEventRevenueAttribute()
+    {
+        $eventRevenue = $this->stats()->get()->reduce(function ($eventRevenue, $statsEntry) {
+            $salesVolume = $statsEntry->sales_volume;
+            $organiserFeesVolume = $statsEntry->organiser_fees_volume;
+
+            return $eventRevenue + $salesVolume + $organiserFeesVolume;
+        });
+
+        return $eventRevenue;
+    }
 
     /**
      * @return \Superbalist\Money\Currency

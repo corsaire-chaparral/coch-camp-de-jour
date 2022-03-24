@@ -75,7 +75,7 @@
         <div class="col-sm-4">
             <div class="stat-box">
                 <h3>
-                    {{ money($organiser->events->sum('sales_volume'), $organiser->account->currency) }}
+                    {{ money($gross_revenue, $organiser->account->currency) }}
                 </h3>
             <span>
                 @lang("Organiser.sales_volume")
