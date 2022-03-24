@@ -46,7 +46,7 @@ return array (
   'organiser_logo_help' => 'Nous recommandons une image carrée, cela rendra mieux sur les inscriptions imprimés et les pages d\'événement.',
   'organiser_menu' => 'Menu organisateur',
   'organiser_name' => 'Nom de l\'organisateur',
-  'organiser_name_dashboard' => 'Tableau de bord :name ',
+  'organiser_name_dashboard' => 'Tableau de bord – :name ',
   'organiser_name_events' => 'Événements :name',
   'organiser_name_placeholder' => 'Qui organise l\'évément?',
   'organiser_page' => 'Page de l\'organisateur',

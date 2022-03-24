@@ -1,6 +1,6 @@
 <?php
 /*************************************************************************
- Generated via "php artisan localization:missing" at 2018/04/18 16:27:47 
+ Generated via "php artisan localization:missing" at 2018/04/18 16:27:47
 *************************************************************************/
 
 return array (
@@ -17,16 +17,17 @@ return array (
   'attendee_cancelled' => 'Annulé',
   'below_order_details_header' => '',
   'below_payment_information_header' => '',
-  'below_tickets' => 'Sélectionnez le nombre d\'inscriptions et cliquez sur «suivant». Vous pourrez indiquer le nom de l\'enfant et effectuer le paiement sur l\'écran suivant.', // «suivant» => register
+  'below_tickets' => 'Sélectionnez le nombre d\'inscriptions et cliquez sur «suivant». Vous pourrez indiquer le nom de l\'enfant et effectuer le paiement à l\'écran suivant.', // «suivant» => register
   'booking_fee' => 'Frais de réservation',
   'booking_fees' => 'Frais de réservation',
   // 'business_details' => ''
   'card_number' => 'Numéro de carte',
+  'checkout_order' => 'Poursuivre vers le paiement',
   'checkout_submit' => 'Placer la commande',
   'confirmation_email' => 'ainsi qu\'un message de confirmation vous ont été envoyés par courriel.',
   'copy_buyer' => 'Copier les détails de l\'acheteur pour tous ceux qui ont des inscriptions',
   'currently_not_on_sale' => 'Pas en vente pour l\'instant',
-  'cvc_number' => 'Numéro CVC',
+  'cvc_number' => 'Numéro de vérification CVC',
   'date' => 'Date',
   'download_links' => 'Un courriel de confirmation vous a été envoyé.',
   'download_tickets' => 'Télécharger les inscriptions',
@@ -64,7 +65,7 @@ return array (
   'quantity_full' => 'Quantité',
   'reference' => 'Référence',
   'refunded_amount' => 'Montant remboursé',
-  'register' => 'Suivant', // next page 
+  'register' => 'Suivant', // next page
   'sales_have_ended' => 'Les ventes sont terminées',
   'sales_have_not_started' => 'Les ventes n\'ont pas commencé',
   'send_message_submit' => 'Envoyer message',
@@ -73,18 +74,18 @@ return array (
   'sub_total' => 'Sous-total',
   'thank_you_for_your_order' => 'Merci pour votre commande !',
   'ticket' => 'inscription',
-  'ticket_holder_information' => 'Information de la personne inscrite',
+  'ticket_holder_information' => 'Information de l’enfant à inscrire',
   'ticket_holder_n' => 'Détails pour l\'enfant :n',
   'ticket_price' => 'Prix de l\'inscription',
   'tickets' => 'Inscriptions',
   'tickets_are_currently_unavailable' => 'Les inscriptions ne sont pas disponibles actuellement',
-  'time' => 'Merci de noter que vous n\'avez que :time pour terminer cette transaction avant que vos inscriptions ne soient remises en vente.',
+  'time' => 'Vous avez :time pour terminer cette transaction avant que vos inscriptions ne soient remises en vente.',
   'total' => 'Total',
-  'your_email_address' => 'Votre adresse de courriel',
+  'your_email_address' => 'Votre adresse courriel',
   'your_information' => 'Informations de facturation (parent)',
   'your_message' => 'Votre message',
   'your_name' => 'Votre nom',
   'your' => 'Vos',
   'stripe_credit_or_debit_card' => 'Carte de crédit ou de débit',
-  'complete_payment' => 'Effectuer le paiement',
+  'complete_payment' => 'Payer',
 );
