@@ -76,140 +76,10 @@ $(function() {
         e.preventDefault();
         e.stopImmediatePropagation();
 
-<<<<<<< HEAD
-        var $form =
-                $(this),
-                $submitButton = $form.find('input[type=submit]'),
-                ajaxFormConf = {
-                    delegation: true,
-                    beforeSerialize: function(jqForm, options) {
-                        window.doSubmit = true;
-                        clearFormErrors(jqForm[0]);
-                        toggleSubmitDisabled($submitButton);
-                    },
-                    beforeSubmit: function() {
-                        $submitButton = $form.find('input[type=submit]');
-                        toggleSubmitDisabled($submitButton);
-                        return window.doSubmit;
-                    },
-                    error: function(data, statusText, xhr, $form) {
-                        $submitButton = $form.find('input[type=submit]');
-                        console.error('Une erreur est survenue', $.parseJSON(data.responseText), statusText);
-=======
         var ajaxFormConf = getAjaxFormConfig($(this));
->>>>>>> upstream/master
 
         $(this).ajaxSubmit(ajaxFormConf);
 
-<<<<<<< HEAD
-                        toggleSubmitDisabled($submitButton);
-                        showMessage(lang("whoops"));
-                    },
-                    success: function(data, statusText, xhr, $form) {
-                        var $submitButton = $form.find('input[type=submit]');
-                        console.log('success', data.responseText);
-
-                        if (data.message) {
-                            showMessage(data.message);
-                        }
-                        switch (data.status) {
-                            case 'success':
-
-                                if (data.redirectUrl) {
-                                    if(data.redirectData)  {
-                                        $.redirectPost(data.redirectUrl, data.redirectData);
-                                    } else {
-                                        document.location.href = data.redirectUrl;
-                                    }
-                                }
-                                break;
-
-                            case 'error':
-                                if (data.messages) {
-                                    processFormErrors($form, data.messages);
-                                    return;
-                                }
-                                break;
-
-                            default:
-                                break;
-
-
-                        }
-
-                        toggleSubmitDisabled($submitButton);
-
-
-                    },
-                    dataType: 'json'
-                };
-
-        toggleSubmitDisabled($submitButton);
-
-        if ($form.hasClass('payment-form') && !$('#pay_offline').is(":checked")) {
-            clearFormErrors($('.payment-form'));
-
-            Stripe.setPublishableKey($form.data('stripe-pub-key'));
-
-            var
-                    noErrors = true,
-                    $cardNumber = $('.card-number'),
-                    $cardName = $('.card-name'),
-                    $cvcNumber = $('.card-cvc'),
-                    $expiryMonth = $('.card-expiry-month'),
-                    $expiryYear = $('.card-expiry-year');
-
-
-            if (!Stripe.validateCardNumber($cardNumber.val())) {
-                showFormError($cardNumber, lang("credit_card_error"));
-                noErrors = false;
-            }
-
-            if (!Stripe.validateCVC($cvcNumber.val())) {
-                showFormError($cardNumber, lang("cvc_error"));
-                noErrors = false;
-            }
-
-            if (!Stripe.validateExpiry($expiryMonth.val(), $expiryYear.val())) {
-                showFormError($cardNumber, lang("expiry_error"));
-                showFormError($expiryYear, '');
-                noErrors = false;
-            }
-
-            if (noErrors) {
-                Stripe.card.createToken({
-                    name: $cardName.val(),
-                    number: $cardNumber.val(),
-                    cvc: $cvcNumber.val(),
-                    exp_month: $expiryMonth.val(),
-                    exp_year: $expiryYear.val()
-                },
-                function(status, response) {
-
-                    if (response.error) {
-                        clearFormErrors($('.payment-form'));
-                        if(response.error.param.length>0)
-                            showFormError($('*[data-stripe=' + response.error.param + ']', $('.payment-form')), response.error.message);
-                        else
-                            showMessage(response.error.message);
-                        toggleSubmitDisabled($submitButton);
-                    } else {
-                        var token = response.id;
-                        $form.append($('<input type="hidden" name="stripeToken" />').val(token));
-                        $form.ajaxSubmit(ajaxFormConf);
-                    }
-
-                });
-            } else {
-                showMessage(lang("card_validation_error"));
-                toggleSubmitDisabled($submitButton);
-            }
-
-        } else {
-            $form.ajaxSubmit(ajaxFormConf);
-        }
-=======
->>>>>>> upstream/master
     });
 
     //handles stripe payment form submit
@@ -241,6 +111,7 @@ $(function() {
         form.appendChild(hiddenInput);
 
         var $ajaxFormConf = getAjaxFormConfig($('#stripe-payment-form'));
+        console.log('submitting stripe payment', $ajaxFormConf)
         $('#stripe-payment-form').ajaxSubmit($ajaxFormConf);
 
     }

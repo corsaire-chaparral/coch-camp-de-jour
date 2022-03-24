@@ -189,12 +189,12 @@
                                 <tr>
                                     <td>
                                         @if($attendee->is_cancelled)
-                                            <span class="label label-warning">
+                                            <span class="label label-default">
                                             @lang("Order.attendee_cancelled")
                                         </span>
                                         @endif
                                         @if($attendee->is_refunded)
-                                            <span class="label label-danger">
+                                            <span class="label label-info">
                                                 @lang("Order.attendee_refunded")
                                             </span>
                                         @endif

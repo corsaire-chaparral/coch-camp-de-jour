@@ -1,4 +1,4 @@
-<div class="panel panel-success event">
+<div class="panel panel-default event">
     <div class="panel-heading" data-style="background-color: {{{$event->bg_color}}};background-image: url({{{$event->bg_image_url}}}); background-size: cover;">
         <div class="event-date">
             <div class="month">
@@ -15,7 +15,7 @@
                 </a>
             </li>
             <li class="event-organiser">
-                By <a href='{{route('showOrganiserDashboard', ['organiser_id' => $event->organiser->id])}}'>{{{$event->organiser->name}}}</a>
+                Par <a href='{{route('showOrganiserDashboard', ['organiser_id' => $event->organiser->id])}}'>{{{$event->organiser->name}}}</a>
             </li>
         </ul>
 

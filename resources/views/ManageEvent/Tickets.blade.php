@@ -130,7 +130,11 @@
                             <ul class="nav nav-section nav-justified mt5 mb5">
                                 <li>
                                     <div class="section">
-                                        <h4 class="nm">{{ $ticket->quantity_sold }}</h4>
+                                        <h4 class="nm">
+                                            <a href="{{route('showEventOrders', array('event_id'=>$event->id))}}">
+                                                {{ $ticket->quantity_sold }}
+                                            </a>
+                                        </h4>
 
                                         <p class="nm text-muted">@lang("Ticket.sold")</p>
                                     </div>
