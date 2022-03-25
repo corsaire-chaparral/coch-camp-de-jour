@@ -137,5 +137,8 @@
     <br><br>
 </div>
 <br><br>
-@lang("basic.thank_you")
+@lang("basic.thank_you"),
+<br>
+<br>
+<em>L’équipe du Corsaire-Chaparral</em>
 @stop

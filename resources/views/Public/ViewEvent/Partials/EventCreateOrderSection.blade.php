@@ -1,4 +1,10 @@
 <section id='order_form' class="container">
+    <nav>
+        <button class="btn btn-primary" onclick="window.history.back()">‹ Retour</button>
+    </nav>
+
+    <hr>
+
     <h1 class="section_head">
         @lang("Public_ViewEvent.order_details")
     </h1>

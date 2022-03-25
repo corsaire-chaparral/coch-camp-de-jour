@@ -1,9 +1,7 @@
 <section id="tickets" class="container">
-    <div class="row">
-        <h1 class='section_head'>
-            @lang("Public_ViewEvent.tickets")
-        </h1>
-    </div>
+    <h1 class='section_head'>
+        @lang("Public_ViewEvent.tickets")
+    </h1>
 
     @if($event->end_date->isPast())
         <div class="alert alert-boring">

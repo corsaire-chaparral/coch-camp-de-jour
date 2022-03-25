@@ -75,9 +75,9 @@ return array (
   'thank_you_for_your_order' => 'Merci pour votre commande !',
   'ticket' => 'inscription',
   'ticket_holder_information' => 'Information de l’enfant à inscrire',
-  'ticket_holder_n' => 'Détails pour l\'enfant :n',
+  'ticket_holder_n' => 'Détails pour l\'enfant #:n',
   'ticket_price' => 'Prix de l\'inscription',
-  'tickets' => 'inscriptions',
+  'tickets' => 'Inscriptions',
   'tickets_are_currently_unavailable' => 'Les inscriptions ne sont pas disponibles actuellement',
   'time' => 'Vous avez :time pour terminer cette transaction avant que vos inscriptions ne soient remises en vente.',
   'total' => 'Total',
@@ -86,6 +86,6 @@ return array (
   'your_message' => 'Votre message',
   'your_name' => 'Votre nom',
   'your' => 'Vos',
-  'stripe_credit_or_debit_card' => 'Carte de crédit ou de débit',
+  'stripe_credit_or_debit_card' => 'Carte de crédit', // crédit seulement
   'complete_payment' => 'Payer',
 );

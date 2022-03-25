@@ -137,12 +137,32 @@
                                         </h4>
 
                                         <p class="nm text-muted">@lang("Ticket.sold")</p>
+
+                                        @if($ticket->sale_status === config('attendize.ticket_status_on_sale'))
+                                            @if($ticket->is_paused)
+                                                <span class="label label-default">
+                                                    @lang("Ticket.ticket_sales_paused")
+                                                </span>
+                                            @else
+                                                <span class="label label-primary">
+                                                    @lang("Ticket.on_sale")
+                                                </span>
+                                            @endif
+                                        @else
+                                            {{\App\Models\TicketStatus::find($ticket->sale_status)->name}}
+                                        @endif
                                     </div>
                                 </li>
                                 <li>
                                     <div class="section">
                                         <h4 class="nm">
                                             {{ ($ticket->quantity_available === null) ? '∞' : $ticket->quantity_remaining }}
+
+                                            @if($ticket->quantity_available)
+                                                <small style="font-size: 11px;">
+                                                    / {{ $ticket->quantity_available  }}
+                                                </small>
+                                            @endif
                                         </h4>
 
                                         <p class="nm text-muted">@lang("Ticket.remaining")</p>
@@ -168,19 +188,17 @@
                                     <a href="javascript:void(0);">
                                         @if($ticket->sale_status === config('attendize.ticket_status_on_sale'))
                                             @if($ticket->is_paused)
-                                                @lang("Ticket.ticket_sales_paused") &nbsp;
-                                                <span class="pauseTicketSales label label-info"
+                                                <span class="pauseTicketSales btn btn-sm btn-primary"
                                                       data-id="{{$ticket->id}}"
                                                       data-route="{{route('postPauseTicket', ['event_id'=>$event->id])}}">
-                                    <i class="ico-play4"></i> @lang("Ticket.resume")
-                                </span>
+                                                    <i class="ico-play4"></i> @lang("Ticket.resume")
+                                                </span>
                                             @else
-                                                @lang("Ticket.on_sale") &nbsp;
-                                                <span class="pauseTicketSales label label-info"
+                                                <span class="pauseTicketSales btn btn-sm btn-warning"
                                                       data-id="{{$ticket->id}}"
                                                       data-route="{{route('postPauseTicket', ['event_id'=>$event->id])}}">
-                                    <i class="ico-pause"></i> @lang("Ticket.pause")
-                                </span>
+                                                    <i class="ico-pause"></i> @lang("Ticket.pause")
+                                                </span>
                                             @endif
                                         @else
                                             {{\App\Models\TicketStatus::find($ticket->sale_status)->name}}
