@@ -69,6 +69,23 @@ class EventTicketsController extends MyBaseController
     }
 
     /**
+     * Show the delete ticket modal
+     *
+     * @param $event_id
+     * @param $ticket_id
+     * @return mixed
+     */
+    public function showDeleteTicket($event_id, $ticket_id)
+    {
+        $data = [
+            'event'  => Event::scope()->find($event_id),
+            'ticket' => Ticket::scope()->find($ticket_id),
+        ];
+
+        return view('ManageEvent.Modals.DeleteTicket', $data);
+    }
+
+    /**
      * Show the create ticket modal
      *
      * @param $event_id

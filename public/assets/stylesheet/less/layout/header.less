@@ -44,15 +44,16 @@
         > .navbar-brand {
             display: block;
             width: 100%;
-            padding: 0px 15px;
+            padding: 0;
             line-height: @header-height - 1;
             height: @header-height;
             text-align: center;
             color: @white;
+            background-color: @primary; // spacifically for COCH logo
 
             > .logo-figure {
                 display: block;
-                width: 100%;
+                width: auto;
                 max-width: 100%;
                 max-height: @header-height;
             }
@@ -230,22 +231,17 @@
             // Navbar-nav - main button
             // -----------------------------------
             > .navbar-main {
-                position: absolute;
-                z-index: 1;
-                top: 0px;
-                left: 0px;
 
                 > a {
-                    color: @gray;
+                    color: @attendize-base-color;
 
                     &:hover {
-                        color: @white;
+                        opacity: .75;
                     }
 
                     &:active,
                     &:focus {
-                        color: @white;
-                        background-color: darken(@attendize-base-color, 3%);
+                        background-color: @gray-lighter;
                     }
 
                     > .label,

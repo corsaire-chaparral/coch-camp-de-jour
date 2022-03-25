@@ -108,49 +108,63 @@
         @if($tickets->count())
 
             @foreach($tickets as $ticket)
-                <div id="ticket_{{$ticket->id}}" class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="panel panel-primary ticket" data-ticket-id="{{$ticket->id}}">
-                        <div style="cursor: pointer;" data-modal-id='ticket-{{ $ticket->id }}'
-                             data-href="{{ route('showEditTicket', ['event_id' => $event->id, 'ticket_id' => $ticket->id]) }}"
-                             class="panel-heading loadModal">
-                            <h3 class="panel-title">
-                                @if($ticket->is_hidden)
-                                    <i title="@lang("Ticket.this_ticket_is_hidden")"
-                                       class="ico-eye-blocked ticket_icon mr5 ellipsis"></i>
-                                @else
-                                    <i class="ico-ticket ticket_icon mr5 ellipsis"></i>
-                                @endif
+                <div id="ticket_{{$ticket->id}}" class="col-lg-4 col-sm-6 col-xs-12">
+                    <div class="panel panel-default ticket" data-ticket-id="{{$ticket->id}}">
+                        <div class="panel-heading">
+
+                            <h3 class="panel-title ellipsis">
+                                <i class="ico-ticket ticket_icon mr5 ellipsis"></i>
                                 {{$ticket->title}}
-                                <span class="pull-right">
-                        {{ ($ticket->is_free) ? trans("Order.free") : money($ticket->price, $event->currency) }}
-                    </span>
                             </h3>
+
+                            <div class="sortHandle" title="@lang("basic.drag_to_reorder")">
+                                <i class="ico-paragraph-justify"></i>
+                            </div>
                         </div>
                         <div class='panel-body'>
-                            <ul class="nav nav-section nav-justified mt5 mb5">
+
+                            <section class="ticket-meta">
+                                {{ ($ticket->is_free) ? trans("Order.free") : money($ticket->price, $event->currency) }}
+
+                                @if($ticket->is_hidden)
+                                    <span class="muted" style="opacity: .35; pointer-events: none; margin: 0 .5rem;">|</span>
+                                    <i title="@lang("Ticket.this_ticket_is_hidden")"
+                                       class="ico-eye-blocked"></i>
+                                @endif
+
+                                <span class="muted" style="opacity: .35; pointer-events: none; margin: 0 .5rem;">|</span>
+
+                                @if($ticket->sale_status === config('attendize.ticket_status_on_sale'))
+                                    @if($ticket->is_paused)
+                                        <span class="label label-warning">
+                                            <i class="ico-warning"></i>
+                                            @lang("Ticket.ticket_sales_paused")
+                                        </span>
+                                    @else
+                                        <span class="label label-success">
+                                            @lang("Ticket.on_sale")
+                                        </span>
+                                    @endif
+                                @elseif($ticket->sale_status === config('attendize.ticket_status_after_sale_date'))
+                                    <span class="label label-default">
+                                        <i class="ico-clock"></i>
+                                        @lang("Public_ViewEvent.sales_have_ended")
+                                    </span>
+                                @else
+                                    <span class="label label-default">
+                                        {{\App\Models\TicketStatus::find($ticket->sale_status)->name}}
+                                    </span>
+                                @endif
+                            </section>
+
+                            <ul class="nav nav-section nav-justified mt10 mb5">
                                 <li>
                                     <div class="section">
                                         <h4 class="nm">
-                                            <a href="{{route('showEventOrders', array('event_id'=>$event->id))}}">
-                                                {{ $ticket->quantity_sold }}
-                                            </a>
+                                            {{ $ticket->quantity_sold }}
                                         </h4>
 
                                         <p class="nm text-muted">@lang("Ticket.sold")</p>
-
-                                        @if($ticket->sale_status === config('attendize.ticket_status_on_sale'))
-                                            @if($ticket->is_paused)
-                                                <span class="label label-default">
-                                                    @lang("Ticket.ticket_sales_paused")
-                                                </span>
-                                            @else
-                                                <span class="label label-primary">
-                                                    @lang("Ticket.on_sale")
-                                                </span>
-                                            @endif
-                                        @else
-                                            {{\App\Models\TicketStatus::find($ticket->sale_status)->name}}
-                                        @endif
                                     </div>
                                 </li>
                                 <li>
@@ -179,33 +193,43 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="panel-footer" style="height: 56px;">
-                            <div class="sortHandle" title="@lang("basic.drag_to_reorder")">
-                                <i class="ico-paragraph-justify"></i>
-                            </div>
-                            <ul class="nav nav-section nav-justified">
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        @if($ticket->sale_status === config('attendize.ticket_status_on_sale'))
-                                            @if($ticket->is_paused)
-                                                <span class="pauseTicketSales btn btn-sm btn-primary"
-                                                      data-id="{{$ticket->id}}"
-                                                      data-route="{{route('postPauseTicket', ['event_id'=>$event->id])}}">
-                                                    <i class="ico-play4"></i> @lang("Ticket.resume")
-                                                </span>
-                                            @else
-                                                <span class="pauseTicketSales btn btn-sm btn-warning"
-                                                      data-id="{{$ticket->id}}"
-                                                      data-route="{{route('postPauseTicket', ['event_id'=>$event->id])}}">
-                                                    <i class="ico-pause"></i> @lang("Ticket.pause")
-                                                </span>
-                                            @endif
-                                        @else
-                                            {{\App\Models\TicketStatus::find($ticket->sale_status)->name}}
-                                        @endif
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="panel-footer" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 4px; justify-content: flex-end;">
+
+                            <button class="btn btn-sm btn-default loadModal"
+                                    data-modal-id='ticket-{{ $ticket->id }}'
+                                    data-href="{{ route('showEditTicket', ['event_id' => $event->id, 'ticket_id' => $ticket->id]) }}"
+                            >
+                                <i title="@lang("Ticket.Basic.edit")"
+                                   class="ico-pencil"></i>
+                                &#32;&#32;
+                                @lang("Basic.edit")
+                            </button>
+
+                            @if($ticket->sale_status === config('attendize.ticket_status_on_sale'))
+                                @if($ticket->is_paused)
+                                    <span class="pauseTicketSales btn btn-sm btn-success"
+                                          data-id="{{$ticket->id}}"
+                                          data-route="{{route('postPauseTicket', ['event_id'=>$event->id])}}">
+                                        <i class="ico-play4"></i> @lang("Ticket.resume")
+                                    </span>
+                                @else
+                                    <span class="pauseTicketSales btn btn-sm btn-warning"
+                                          data-id="{{$ticket->id}}"
+                                          data-route="{{route('postPauseTicket', ['event_id'=>$event->id])}}">
+                                <i class="ico-pause"></i> @lang("Ticket.pause")
+                            </span>
+                                @endif
+                            @endif
+
+                            <button class="btn btn-sm btn-danger loadModal"
+                                    data-modal-id='ticket-{{ $ticket->id }}'
+                                    data-href="{{ route('showDeleteTicket', ['event_id' => $event->id, 'ticket_id' => $ticket->id]) }}"
+                            >
+                                <i title="@lang("Ticket.Basic.delete")"
+                                   class="ico-cancel-circle"></i>
+                                &#32;&#32;
+                                @lang("Basic.delete")
+                            </button>
                         </div>
                     </div>
                 </div>

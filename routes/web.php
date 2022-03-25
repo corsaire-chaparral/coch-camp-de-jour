@@ -340,6 +340,10 @@ Route::group(
                 [EventTicketsController::class, 'showEditTicket']
             )->name('showEditTicket');
 
+            Route::get('{event_id}/tickets/delete/{ticket_id}',
+                [EventTicketsController::class, 'showDeleteTicket']
+            )->name('showDeleteTicket');
+
             Route::post('{event_id}/tickets/edit/{ticket_id}',
                 [EventTicketsController::class, 'postEditTicket']
             )->name('postEditTicket');

@@ -38,6 +38,8 @@ return array (
   'event_page' => 'Event Page',
   'event_tools' => 'Event Tools',
   'export' => 'Export',
+  'delete_ticket' => 'Delete ticket',
+  'delete_are_you_sure' => 'Are you sure you want to delete this ticket? This operation is irreversible.',
   'go_to_attendee_name' => 'Go to attendee :name',
   'hide_this_ticket' => 'Hide This Ticket',
   'import_file' => 'Import File',
@@ -96,7 +98,7 @@ return array (
   'ticket_title_placeholder' => 'E.g: General Admission',
   'update_order' => 'Update Order',
   'widgets' => 'Widgets',
-  'LLH:obsolete' => 
+  'LLH:obsolete' =>
   array (
     'create_question' => 'Create Question',
   ),

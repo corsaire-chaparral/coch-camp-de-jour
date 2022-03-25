@@ -32,7 +32,7 @@
 
     <!--rtl-style-->
     @if (config('app.locale_dir') =='rtl')
-        {!! Html::style(config('attendize.cdn_url_static_assets').'/assets/stylesheet/application-rtl.css') !!}    
+        {!! Html::style(config('attendize.cdn_url_static_assets').'/assets/stylesheet/application-rtl.css') !!}
     @endif
     <!--/rtl-style-->
 
@@ -41,7 +41,6 @@
 <body class="attendize">
 @yield('pre_header')
 <header id="header" class="navbar">
-
     <div class="navbar-header">
         <a class="navbar-brand" href="javascript:void(0);">
             <img class="logo-figure" alt="Club d’athlétisme Corsaire-Chaparral" src="{{asset('assets/images/logo-light.png')}}"/>

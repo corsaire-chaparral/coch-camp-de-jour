@@ -129,6 +129,8 @@
                             @endif
                         </div>
                     @endif
+
+                    <button clas="btn btn-danger"></button>
                 </div>
                 <a href="javascript:void(0);" class="show-more-options">
                     @lang("ManageEvent.more_options")

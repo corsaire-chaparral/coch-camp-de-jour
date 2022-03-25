@@ -74,9 +74,10 @@
         }
 
         > .heading {
-            font-size: 13px;
-            font-weight: 400;
+            font-size: 12px;
+            font-weight: 600;
             text-transform: uppercase;
+            letter-spacing: .035em;
             color: @white;
             margin: 0px;
             padding: 25px 25px 15px 25px;
@@ -127,7 +128,7 @@
 
             // State - active
             // -----------------------------------
-            &.active { 
+            &.active {
 
                 &:after {
                     border-color: transparent;
@@ -173,6 +174,7 @@
                 color: lighten(@sidebar-base-color, 50%);
                 outline: 0;
                 padding: 6px 25px 6px 12px;
+                transition: color .2s;
 
                 // State - hover
                 // -----------------------------------
@@ -208,8 +210,10 @@
                     table-layout: fixed;
                     vertical-align: middle;
                     width: 100%;
-                    line-height: 30px;
-                    font-weight: 200;
+                    line-height: 28px;
+                    font-size: 11px;
+                    font-weight: 300;
+                    letter-spacing: .025em;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;

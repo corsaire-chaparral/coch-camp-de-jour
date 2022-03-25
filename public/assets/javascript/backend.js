@@ -9514,7 +9514,14 @@ $.cf = {
                     break;
 
                 case 'error':
-                    processFormErrors($form, data.messages);
+                    if (data.messages) {
+                        processFormErrors($form, data.message);
+                    }
+                    if (typeof data.message !== 'undefined') {
+                        showMessage(data.message);
+                    }
+                    var $submitButton = $form.find('input[type=submit]');
+                    toggleSubmitDisabled($submitButton);
                     break;
 
                 default:
@@ -9718,7 +9725,7 @@ $.cf = {
             if (!$(this).data('original-text')) {
                 $(this).data('original-text', $(this).html());
             }
-            $(this).html(!$(this).data('show-less-text') ? 'Show Less' : $(this).data('show-less-text'));
+            $(this).html(!$(this).data('show-less-text') ? 'Voir moins' : $(this).data('show-less-text'));
         }
 
         $(this).toggleClass('toggled');

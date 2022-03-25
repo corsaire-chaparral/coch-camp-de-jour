@@ -1,6 +1,6 @@
 <?php
 /*************************************************************************
- Generated via "php artisan localization:missing" at 2018/04/26 11:05:24 
+ Generated via "php artisan localization:missing" at 2018/04/26 11:05:24
 *************************************************************************/
 
 return array (
@@ -33,6 +33,8 @@ return array (
   'edit_order_title' => 'Commande : <b>:order_ref</b>',
   'edit_question' => 'Éditer la question',
   'edit_ticket' => 'Éditer l\'inscription',
+  'delete_are_you_sure' => 'Êtes vous sûr de supprimer cette inscription? Cette opération est irréversible.',
+  'delete_ticket' => 'Supprimer l\'inscription',
   'end_sale_on' => 'Terminer la vente sur',
   'event_not_live' => 'Cet événement n\'est pas visible au public.',
   'event_page' => 'Page de l\'événement',
@@ -97,7 +99,7 @@ return array (
   'update_order' => 'Mettre à jour la commande',
   'widgets' => 'Widgets',
   //================================== Obsolete strings ==================================//
-  'LLH:obsolete' => 
+  'LLH:obsolete' =>
   array (
     'create_question' => 'Créer une question',
   ),
