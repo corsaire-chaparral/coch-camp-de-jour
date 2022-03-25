@@ -5,6 +5,7 @@
 
 return array (
   //==================================== Translations ====================================//
+  'apply' => 'Activer',
   'action' => 'Action',
   'affiliates' => 'Partenaire',
   'attendees' => 'Participants',

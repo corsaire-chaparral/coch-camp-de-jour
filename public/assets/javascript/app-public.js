@@ -179,9 +179,9 @@ $(function() {
     });
 
     $('#mirror_buyer_info').on('click', function(e) {
-        $('.ticket_holder_first_name').val($('#order_first_name').val());
-        $('.ticket_holder_last_name').val($('#order_last_name').val());
-        $('.ticket_holder_email').val($('#order_email').val());
+        $('.ticket_holder_first_name').val($('.ticket_holder_first_name').first().val());
+        $('.ticket_holder_last_name').val($('.ticket_holder_last_name').first().val());
+        // $('.ticket_holder_email').val($('#order_email').val());
     });
 
     $('.card-number').payment('formatCardNumber');

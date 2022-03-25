@@ -43,6 +43,8 @@ return array (
   'expiry_year' => 'Année d\'expiration',
   'first_name' => 'Prénom',
   'free' => 'GRATUIT',
+  'grand_total' => 'Grand total',
+  'has_unlock_codes' => 'Avez-vous un code?',
   'inc_fees' => '(de frais inclus)',
   'last_name' => 'Nom',
   'offline_payment_instructions' => 'Instructions pour le paiement hors ligne',

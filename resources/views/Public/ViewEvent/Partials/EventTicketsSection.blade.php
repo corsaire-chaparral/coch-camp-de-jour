@@ -97,7 +97,7 @@
                                     'class' => 'form-control',
                                     'id' => 'unlock_code',
                                     'style' => 'display:inline-block;width:65%;text-transform:uppercase;',
-                                    'placeholder' => 'ex: UNLOCKCODE01',
+                                    'placeholder' => 'ex: CODE007',
                                 ]) !!}
                                     {!! Form::button(trans("basic.apply"), [
                                         'class' => "btn btn-success",
