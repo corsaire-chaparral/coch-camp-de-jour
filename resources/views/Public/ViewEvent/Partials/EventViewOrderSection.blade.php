@@ -49,11 +49,11 @@
 <section id="order_form" class="container">
     <div class="row">
         <div class="col-md-12 order_header">
-            <h1>{{ @trans("Public_ViewEvent.thank_you_for_your_order") }}</h1>
-
             <span class="massive-icon">
                 <i class="ico ico-checkmark-circle"></i>
             </span>
+            
+            <h1>{{ @trans("Public_ViewEvent.thank_you_for_your_order") }}</h1>
 
             <hr>
             <h2>
