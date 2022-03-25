@@ -17,6 +17,8 @@
 
                 <p>
                     {!! md_to_html($event->organiser->about) !!}
+                    <br>
+                    <br>
                 </p>
                 <p>
                     @if($event->organiser->facebook)
