@@ -77,7 +77,7 @@ return array (
   'ticket_holder_information' => 'Information de l’enfant à inscrire',
   'ticket_holder_n' => 'Détails pour l\'enfant :n',
   'ticket_price' => 'Prix de l\'inscription',
-  'tickets' => 'Inscriptions',
+  'tickets' => 'inscriptions',
   'tickets_are_currently_unavailable' => 'Les inscriptions ne sont pas disponibles actuellement',
   'time' => 'Vous avez :time pour terminer cette transaction avant que vos inscriptions ne soient remises en vente.',
   'total' => 'Total',
