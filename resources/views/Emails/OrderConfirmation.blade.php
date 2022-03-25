@@ -5,7 +5,7 @@
 
 {!! @trans("Order_Emails.successful_order", ["name"=>$order->event->title]) !!}<br><br>
 
-{{ @trans("Order_Emails.tickets_attached") }} <a href="{{route('showOrderDetails', ['order_reference' => $order->order_reference])}}">{{route('showOrderDetails', ['order_reference' => $order->order_reference])}}</a>.
+{{-- {{ @trans("Order_Emails.tickets_attached") }} <a href="{{route('showOrderDetails', ['order_reference' => $order->order_reference])}}">{{route('showOrderDetails', ['order_reference' => $order->order_reference])}}</a>. --}}
 
 @if(!$order->is_payment_received)
 <br><br>
@@ -15,15 +15,15 @@
 <br><br>
 @endif
 
-<h3>Order Details</h3>
-Order Reference: <strong>{{$order->order_reference}}</strong><br>
-Order Name: <strong>{{$order->full_name}}</strong><br>
-Order Date: <strong>{{$order->created_at->format(config('attendize.default_datetime_format'))}}</strong><br>
-Order Email: <strong>{{$order->email}}</strong><br>
-<a href="{!! route('downloadCalendarIcs', ['event_id' => $order->event->id]) !!}">Add To Calendar</a>
+<h3>Détails de la commande</h3>
+Code de référence : <strong>{{$order->order_reference}}</strong><br>
+Au nom de : <strong>{{$order->full_name}}</strong><br>
+Date : <strong>{{$order->created_at->format(config('attendize.default_datetime_format'))}}</strong><br>
+Courriel : <strong>{{$order->email}}</strong><br>
+{{-- <a href="{!! route('downloadCalendarIcs', ['event_id' => $order->event->id]) !!}">Ajouter au calendrier</a> --}}
 
 @if ($order->is_business)
-<h3>Business Details</h3>
+<h3>Détails d’entreprise</h3>
 @if ($order->business_name) @lang("Public_ViewEvent.business_name"): <strong>{{$order->business_name}}</strong><br>@endif
 @if ($order->business_tax_number) @lang("Public_ViewEvent.business_tax_number"): <strong>{{$order->business_tax_number}}</strong><br>@endif
 @if ($order->business_address_line_one) @lang("Public_ViewEvent.business_address_line1"): <strong>{{$order->business_address_line_one}}</strong><br>@endif
@@ -33,12 +33,12 @@ Order Email: <strong>{{$order->email}}</strong><br>
 @if ($order->business_address_code) @lang("Public_ViewEvent.business_address_code"): <strong>{{$order->business_address_code}}</strong><br>@endif
 @endif
 
-<h3>Order Items</h3>
+<h3>Sélection</h3>
 <div style="padding:10px; background: #F9F9F9; border: 1px solid #f1f1f1;">
     <table style="width:100%; margin:10px;">
         <tr>
             <td>
-                <strong>Billet</strong>
+                <strong>Inscription</strong>
             </td>
             <td>
                 <strong>Qté</strong>
@@ -112,5 +112,5 @@ Order Email: <strong>{{$order->email}}</strong><br>
 <br><br>
 Merci!
 <br><br>
-L’équipe du Corsaire-Chaparral
+<em>L’équipe du Corsaire-Chaparral</em>
 @stop

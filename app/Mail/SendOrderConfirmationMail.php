@@ -45,15 +45,17 @@ class SendOrderConfirmationMail extends Mailable
      */
     public function build()
     {
-        $file_name = $this->order->order_reference;
-        $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/' . $file_name . '.pdf';
+        // [Camp de jour] no need to create PDF if not attaching it
+        // $file_name = $this->order->order_reference;
+        // $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/' . $file_name . '.pdf';
 
         $subject = trans(
             "Controllers.tickets_for_event",
             ["event" => $this->order->event->title]
         );
         return $this->subject($subject)
-                    ->attach($file_path)
+                    // [Camp de jour] do not attach ticket
+                    //->attach($file_path)
                     ->view('Emails.OrderConfirmation');
     }
 }
