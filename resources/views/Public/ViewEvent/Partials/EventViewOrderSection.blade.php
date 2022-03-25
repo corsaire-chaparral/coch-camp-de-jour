@@ -4,9 +4,9 @@
         border: none !important;
         font-size: 30px;
         text-align: center;
-        margin: 0 0 30px;
-        letter-spacing: .2em;
-        font-weight: 200;
+        margin: 30px 0;
+        letter-spacing: .015em;
+        font-weight: 700;
     }
 
     .order_header {
@@ -19,7 +19,7 @@
         height: 120px;
         font-size: 100px;
         margin: 0 auto;
-        color: #63C05E;
+        color: #ff6900;
     }
 
     .order_header h1 {
@@ -49,10 +49,12 @@
 <section id="order_form" class="container">
     <div class="row">
         <div class="col-md-12 order_header">
+            <h1>{{ @trans("Public_ViewEvent.thank_you_for_your_order") }}</h1>
+
             <span class="massive-icon">
                 <i class="ico ico-checkmark-circle"></i>
             </span>
-            <h1>{{ @trans("Public_ViewEvent.thank_you_for_your_order") }}</h1>
+
             <hr>
             <h2>
                 {{ @trans("Public_ViewEvent.your") }}
@@ -304,11 +306,11 @@
                                 <td>
                                     {{{$attendee->ticket->title}}}
                                 </td>
+                                @if($attendee->is_cancelled)
                                 <td>
-                                    @if($attendee->is_cancelled)
-                                        @lang("Public_ViewEvent.attendee_cancelled")
-                                    @endif
+                                    @lang("Public_ViewEvent.attendee_cancelled")
                                 </td>
+                                @endif
                             </tr>
                             @endforeach
                         </tbody>

@@ -12,14 +12,14 @@ return array (
   'TICKETS' => 'INSCRIPTIONS',
   'Twitter' => 'Twitter',
   'Whatsapp' => 'Whatsapp',
-  'amount' => 'Quantité',
+  'amount' => 'Total',
   'at' => '@',
   'attendee_cancelled' => 'Annulé',
   'below_order_details_header' => '',
   'below_payment_information_header' => '',
   'below_tickets' => 'Sélectionnez le nombre d\'inscriptions et cliquez sur «suivant». Vous pourrez indiquer le nom de l\'enfant et effectuer le paiement à l\'écran suivant.', // «suivant» => register
-  'booking_fee' => 'Frais de réservation',
-  'booking_fees' => 'Frais de réservation',
+  'booking_fee' => 'Frais',
+  'booking_fees' => 'Frais',
   // 'business_details' => ''
   'card_number' => 'Numéro de carte',
   'checkout_order' => 'Poursuivre vers le paiement',
