@@ -737,11 +737,12 @@ class EventCheckoutController extends Controller
         Log::debug('Queueing Order Tickets Job');
         SendOrderConfirmationJob::dispatch($order, $orderService);
         // Send tickets to attendees
-        Log::debug('Queueing Attendee Ticket Jobs');
-        foreach ($order->attendees as $attendee) {
-            SendOrderAttendeeTicketJob::dispatch($attendee);
-            Log::debug('Queueing Attendee Ticket Job Done');
-        }
+        Log::info('[Camp de jour COCH] Skipping sending attendee tickets');
+//        Log::debug('Queueing Attendee Ticket Jobs');
+//        foreach ($order->attendees as $attendee) {
+//            SendOrderAttendeeTicketJob::dispatch($attendee);
+//            Log::debug('Queueing Attendee Ticket Job Done');
+//        }
 
         if ($return_json) {
             return response()->json([

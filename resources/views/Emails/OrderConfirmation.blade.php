@@ -38,16 +38,16 @@ Order Email: <strong>{{$order->email}}</strong><br>
     <table style="width:100%; margin:10px;">
         <tr>
             <td>
-                <strong>Ticket</strong>
+                <strong>Billet</strong>
             </td>
             <td>
-                <strong>Qty.</strong>
+                <strong>Qté</strong>
             </td>
             <td>
-                <strong>Price</strong>
+                <strong>Prix</strong>
             </td>
             <td>
-                <strong>Fee</strong>
+                <strong>Frais</strong>
             </td>
             <td>
                 <strong>Total</strong>
@@ -59,7 +59,7 @@ Order Email: <strong>{{$order->email}}</strong><br>
             <td>{{$order_item->quantity}}</td>
             <td>
                 @isFree($order_item->unit_price)
-                FREE
+                GRATUIT
                 @else
                 {{money($order_item->unit_price, $order->event->currency)}}
                 @endif
@@ -73,7 +73,7 @@ Order Email: <strong>{{$order->email}}</strong><br>
             </td>
             <td>
                 @isFree($order_item->unit_price)
-                FREE
+                GRATUIT
                 @else
                 {{money(($order_item->unit_price + $order_item->unit_booking_fee) * ($order_item->quantity),
                 $order->event->currency)}}
@@ -83,7 +83,7 @@ Order Email: <strong>{{$order->email}}</strong><br>
         @endforeach
         <tr>
             <td colspan="3"></td>
-            <td><strong>Sub Total</strong></td>
+            <td><strong>Sous-total</strong></td>
             <td colspan="2">
                 {{$orderService->getOrderTotalWithBookingFee(true)}}
             </td>
@@ -110,5 +110,7 @@ Order Email: <strong>{{$order->email}}</strong><br>
     <br><br>
 </div>
 <br><br>
-Thank you
+Merci!
+<br><br>
+L’équipe du Corsaire-Chaparral
 @stop
