@@ -15,9 +15,9 @@
                     @endif
                 </h3>
 
-                <div property="description">
+                <p>
                     {!! md_to_html($event->organiser->about) !!}
-                </div>
+                </p>
                 <p>
                     @if($event->organiser->facebook)
                         <a property="sameAs" href="https://fb.com/{{$event->organiser->facebook}}" class="btn btn-facebook">
