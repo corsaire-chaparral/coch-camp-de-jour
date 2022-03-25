@@ -199,10 +199,10 @@
                                     data-modal-id='ticket-{{ $ticket->id }}'
                                     data-href="{{ route('showEditTicket', ['event_id' => $event->id, 'ticket_id' => $ticket->id]) }}"
                             >
-                                <i title="@lang("Ticket.Basic.edit")"
+                                <i title="@lang("Ticket.basic.edit")"
                                    class="ico-pencil"></i>
                                 &#32;&#32;
-                                @lang("Basic.edit")
+                                @lang("basic.edit")
                             </button>
 
                             @if($ticket->sale_status === config('attendize.ticket_status_on_sale'))
@@ -225,10 +225,10 @@
                                     data-modal-id='ticket-{{ $ticket->id }}'
                                     data-href="{{ route('showDeleteTicket', ['event_id' => $event->id, 'ticket_id' => $ticket->id]) }}"
                             >
-                                <i title="@lang("Ticket.Basic.delete")"
+                                <i title="@lang("Ticket.basic.delete")"
                                    class="ico-cancel-circle"></i>
                                 &#32;&#32;
-                                @lang("Basic.delete")
+                                @lang("basic.delete")
                             </button>
                         </div>
                     </div>
