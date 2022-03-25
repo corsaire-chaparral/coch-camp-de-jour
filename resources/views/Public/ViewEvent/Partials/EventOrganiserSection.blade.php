@@ -18,7 +18,6 @@
                 <p>
                     {!! md_to_html($event->organiser->about) !!}
                     <br>
-                    <br>
                 </p>
                 <p>
                     @if($event->organiser->facebook)
@@ -26,11 +25,11 @@
                             <i class="ico-facebook"></i>&nbsp; @lang("Public_ViewEvent.Facebook")
                         </a>
                     @endif
-                        @if($event->organiser->twitter)
-                            <a property="sameAs" href="https://twitter.com/{{$event->organiser->twitter}}" class="btn btn-twitter">
-                                <i class="ico-twitter"></i>&nbsp; @lang("Public_ViewEvent.Twitter")
-                            </a>
-                        @endif
+                    @if($event->organiser->twitter)
+                        <a property="sameAs" href="https://twitter.com/{{$event->organiser->twitter}}" class="btn btn-twitter">
+                            <i class="ico-twitter"></i>&nbsp; @lang("Public_ViewEvent.Twitter")
+                        </a>
+                    @endif
                     <button onclick="$(function(){ $('.contact_form').slideToggle(); });" type="button" class="btn btn-primary">
                         <i class="ico-envelop"></i>&nbsp; @lang("Public_ViewEvent.Contact")
                     </button>
