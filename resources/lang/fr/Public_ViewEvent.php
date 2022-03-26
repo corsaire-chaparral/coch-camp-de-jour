@@ -17,7 +17,7 @@ return array (
   'attendee_cancelled' => 'Annulé',
   'below_order_details_header' => '',
   'below_payment_information_header' => '',
-  'below_tickets' => 'Vous pourrez indiquer le nom de l\'enfant pour chaque inscription à l\'écran suivant.', // «suivant» => register
+  'below_tickets' => 'Une fois votre sélection terminée, cliquez sur le bouton «&nbsp;suivant&nbsp;» pour passer à la prochaine étape.', // «suivant» => register
   'booking_fee' => 'Frais',
   'booking_fees' => 'Frais',
   // 'business_details' => ''

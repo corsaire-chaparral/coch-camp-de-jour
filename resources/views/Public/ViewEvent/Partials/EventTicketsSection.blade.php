@@ -3,6 +3,17 @@
         @lang("Public_ViewEvent.tickets")
     </h1>
 
+    {{-- Camp de jour: message personnalisé --}}
+    <div class="alert alert-info">
+        <p>
+            <strong>Note</strong>
+            <i class="ico-info2"></i>
+        <p>
+
+            Ajoutez le nombre d’inscriptions souhaité ici. Vous pourrez indiquer le nom de l’enfant à l’écran suivant.
+        </p>
+    </div>
+
     @if($event->end_date->isPast())
         <div class="alert alert-boring">
             @lang("Public_ViewEvent.event_already", ['started' => trans('Public_ViewEvent.event_already_ended')])
