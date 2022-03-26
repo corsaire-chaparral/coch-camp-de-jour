@@ -100,7 +100,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     {!! Form::label('max_per_person', trans("ManageEvent.maximum_tickets_per_order"), array('class'=>' control-label')) !!}
-                                    {!! Form::selectRange('max_per_person', 1, 100, 30, ['class' => 'form-control']) !!}
+                                    {!! Form::selectRange('max_per_person', 1, 4, 4, ['class' => 'form-control']) !!}
                                 </div>
                             </div>
                         </div>

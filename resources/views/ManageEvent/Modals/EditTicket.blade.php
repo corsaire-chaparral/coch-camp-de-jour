@@ -83,13 +83,14 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             {!! Form::label('min_per_person', trans("ManageEvent.minimum_tickets_per_order"), array('class'=>' control-label')) !!}
-                           {!! Form::selectRange('min_per_person', 1, 100, null, ['class' => 'form-control']) !!}
+                           {!! Form::selectRange('min_per_person', 1, 4, null, ['class' => 'form-control']) !!}
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             {!! Form::label('max_per_person', trans("ManageEvent.maximum_tickets_per_order"), array('class'=>' control-label')) !!}
-                           {!! Form::selectRange('max_per_person', 1, 100, null, ['class' => 'form-control']) !!}
+                            {{-- Camp de jour: reduce max_per_person default range to 4 --}}
+                            {!! Form::selectRange('max_per_person', 1, 4, 4, ['class' => 'form-control']) !!}
                         </div>
                     </div>
                 </div>
