@@ -9,7 +9,7 @@ Fork de la plateforme [Attendize](https://github.com/Attendize/Attendize) pour r
 Insérer une nouvelle entrée dans la base de données pour avoir la virgule, le symbole à droite :
 
 ```sql
-INSERT INTO `currencies` (`title`, `symbol_left`, `symbol_right`, `code`, `decimal_place`, `value`, `decimal_point`, `thousand_point`, `status`,) VALUES ('Dollar canadien', '', '$', 'CAD', '2', '1.00000000', ',', ' ', '1');
+INSERT INTO `currencies` (`title`, `symbol_left`, `symbol_right`, `code`, `decimal_place`, `value`, `decimal_point`, `thousand_point`, `status`) VALUES ('Dollar canadien', '', '$', 'CAD', '2', '1.00000000', ',', ' ', '1');
 ```
 ---
 
