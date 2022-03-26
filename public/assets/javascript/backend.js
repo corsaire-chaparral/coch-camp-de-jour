@@ -9470,6 +9470,8 @@ $.cf = {
         },
         error: function (data, statusText, xhr, $form) {
 
+            var $submitButton = $form.find('input[type=submit]');
+            toggleSubmitDisabled($submitButton);
             // Form validation error.
             if (422 == data.status) {
                 processFormErrors($form, $.parseJSON(data.responseText));
@@ -9478,13 +9480,13 @@ $.cf = {
 
             showMessage('Whoops!, it looks like the server returned an error.');
 
-            var $submitButton = $form.find('input[type=submit]');
-            toggleSubmitDisabled($submitButton);
 
             $('.uploadProgress').hide();
         },
         success: function (data, statusText, xhr, $form) {
 
+            var $submitButton = $form.find('input[type=submit]');
+            toggleSubmitDisabled($submitButton);
             switch (data.status) {
                 case 'success':
 
@@ -9496,8 +9498,6 @@ $.cf = {
                         $('.modal, .modal-backdrop').fadeOut().remove();
                     }
 
-                    var $submitButton = $form.find('input[type=submit]');
-                    toggleSubmitDisabled($submitButton);
 
                     if (typeof data.message !== 'undefined') {
                         showMessage(data.message);
@@ -9520,8 +9520,6 @@ $.cf = {
                     if (typeof data.message !== 'undefined') {
                         showMessage(data.message);
                     }
-                    var $submitButton = $form.find('input[type=submit]');
-                    toggleSubmitDisabled($submitButton);
                     break;
 
                 default:
