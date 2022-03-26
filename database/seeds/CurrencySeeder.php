@@ -25,6 +25,21 @@ class CurrencySeeder extends Seeder
                 'created_at' => '2013-11-29 19:51:38',
                 'updated_at' => '2013-11-29 19:51:38',
             ],
+            // Pour affichage en français, avec la virgule et le symbole à droite
+            [
+                'id' => 1,
+                'title' => 'Dollar canadien',
+                'symbol_left' => '',
+                'symbol_right' => '$',
+                'code' => 'CAD',
+                'decimal_place' => 2,
+                'value' => 1.00000000,
+                'decimal_point' => ',',
+                'thousand_point' => ' ',
+                'status' => 1,
+                'created_at' => '2022-03-26 18:44:38',
+                'updated_at' => '2022-03-26 18:44:38',
+            ],
             [
                 'id' => 2,
                 'title' => 'Euro',

@@ -6,11 +6,8 @@ Fork de la plateforme [Attendize](https://github.com/Attendize/Attendize) pour r
 
 ### Dollar canadien
 
-Insérer une nouvelle entrée dans la base de données pour avoir la virgule, le symbole à droite :
+Le dollar canadien (décimales avec la virgule, symbole à droite) a été ajouté dans `database/seeds/currencies`.
 
-```sql
-INSERT INTO `currencies` (`title`, `symbol_left`, `symbol_right`, `code`, `decimal_place`, `value`, `decimal_point`, `thousand_point`, `status`) VALUES ('Dollar canadien', '', '$', 'CAD', '2', '1.00000000', ',', ' ', '1');
-```
 ---
 
 *Attendize* is an open-source ticketing and event management application built using the Laravel PHP framework. Attendize allows event organisers to sell tickets to their events and manage attendees without paying service fees to third party ticketing companies.
