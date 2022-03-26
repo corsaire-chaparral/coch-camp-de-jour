@@ -1,11 +1,12 @@
 <div class="panel panel-default event">
     <div class="panel-heading" data-style="background-color: {{{$event->bg_color}}};background-image: url({{{$event->bg_image_url}}}); background-size: cover;">
         <div class="event-date">
-            <div class="month">
-                {{strtoupper(explode("|", trans("basic.months_short"))[$event->start_date->format('n')])}}
-            </div>
+            {{-- Camp de jour: inverser day/month pour français --}}
             <div class="day">
                 {{$event->start_date->format('d')}}
+            </div>
+            <div class="month">
+                {{strtoupper(explode("|", trans("basic.months_short"))[$event->start_date->format('n')])}}
             </div>
         </div>
         <ul class="event-meta">
@@ -22,6 +23,18 @@
     </div>
 
     <div class="panel-body">
+
+        @if(!$event->is_live)
+            <span class="label label-default" title="{{ @trans("ManageEvent.event_not_live") }}">
+                <i class="ico-eye-close"></i>
+                @lang('basic.offline')
+            </span>
+        @else
+            <span class="label label-success">
+                <i class="ico-eye"></i>
+                @lang('basic.online')
+            </span>
+        @endif
         <ul class="nav nav-section nav-justified mt5 mb5">
             <li>
                 <div class="section">

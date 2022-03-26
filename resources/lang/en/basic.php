@@ -37,6 +37,8 @@ return array (
   'minutes' => 'minutes',
   'months_short' => '|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|',
   'no' => 'No',
+  'offline' => 'Offline',
+  'online' => 'Online',
   'order_form' => 'Order Form',
   'orders' => 'Orders',
   'promote' => 'Promote',
