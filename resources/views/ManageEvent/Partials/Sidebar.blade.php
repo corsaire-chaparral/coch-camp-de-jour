@@ -3,9 +3,9 @@
         <h5 class="heading">@lang("basic.main_menu")</h5>
         <ul id="nav_main" class="topmenu">
             <li>
-                <a href="{{route('showOrganiserDashboard', ['organiser_id' => $event->organiser->id])}}">
+                <a href="{{route('showOrganiserEvents', ['organiser_id' => $event->organiser->id])}}">
                     <span class="figure"><i class="ico-arrow-left"></i></span>
-                    <span class="text">@lang("basic.back_to_page", ["page"=>$event->organiser->name])</span>
+                    <span class="text">@lang("basic.back_to_page", ["page"=>trans('Organiser.events')])</span>
                 </a>
             </li>
         </ul>

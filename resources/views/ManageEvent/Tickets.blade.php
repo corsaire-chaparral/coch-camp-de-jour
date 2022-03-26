@@ -12,6 +12,9 @@
 @section('page_title')
     <i class="ico-ticket mr5"></i>
     @lang("Ticket.event_tickets")
+    <strong class="text-primary">
+        {{ $event->title}}
+    </strong>
 @stop
 
 @section('head')
@@ -206,7 +209,8 @@
                                 @lang("basic.edit")
                             </button>
 
-                            @if($ticket->sale_status === config('attendize.ticket_status_on_sale'))
+                            {{-- ticket_status_on_sale is on sale (for future) and ticket_status_off_sale is currently on sale --}}
+                            @if($ticket->sale_status === config('attendize.ticket_status_on_sale') || $ticket->sale_status === config('attendize.ticket_status_off_sale'))
                                 @if($ticket->is_paused)
                                     <span class="pauseTicketSales btn btn-sm btn-success"
                                           data-id="{{$ticket->id}}"
