@@ -502,9 +502,6 @@ function processFormErrors($form, errors)
                 .addClass('has-error');
         }
     });
-
-    var $submitButton = $form.find('input[type=submit]');
-    toggleSubmitDisabled($submitButton);
 }
 
 
