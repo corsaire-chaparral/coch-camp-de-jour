@@ -113,7 +113,7 @@ $(function () {
 
                 case 'error':
                     if (data.messages) {
-                        processFormErrors($form, data.message);
+                        processFormErrors($form, data.messages);
                     }
                     if (typeof data.message !== 'undefined') {
                         showMessage(data.message);

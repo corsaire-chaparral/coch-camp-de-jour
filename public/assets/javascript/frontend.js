@@ -4598,6 +4598,7 @@ function log() {
             showMessage(lang("whoops"));
         },
         success: function (data, statusText, xhr, $form) {
+            debugger;
             var $submitButton = $form.find('input[type=submit]');
 
             if (data.message) {

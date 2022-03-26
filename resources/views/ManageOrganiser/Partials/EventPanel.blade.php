@@ -51,6 +51,18 @@
                     <i class="ico-cog"></i> @lang("basic.manage")
                 </a>
             </li>
+
+            <li style="text-align: center">
+
+                <button
+                    data-modal-id='DeleteEvent'
+                    data-href="{{route('showDeleteEvent', ['event_id'=>$event->id])}}"
+                    class='loadModal btn btn-danger' type="button"
+                >
+                    <i class="ico-trash"></i>
+                    @lang("basic.delete")
+                </button>
+            </li>
         </ul>
     </div>
 </div>

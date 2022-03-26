@@ -5,7 +5,7 @@
  * --------------------------- */
 .alert {
     padding: 10px;
-    background: @white !important;
+    background: @white;
     border-left-width: 4px;
 }
 .alert-dismissable {
@@ -13,7 +13,7 @@
 
     .close {
         right: 0px;
-    } 
+    }
 }
 
 /* success */
@@ -42,9 +42,9 @@
 
 /* warning */
 .alert-warning {
-    color: darken(@warning, 28%) !important;
+    color: darken(@warning, 10%);
     background-color: lighten(@warning, 25%);
-    border-color: lighten(@warning, 21%);
+    border-color: lighten(@warning, 10%);
 
     .gritter-item,
     .gritter-close {
@@ -62,7 +62,7 @@
     .gritter-close {
         color: darken(@danger, 10%) !important;
     }
-    
+
 }
 
 /* borning */

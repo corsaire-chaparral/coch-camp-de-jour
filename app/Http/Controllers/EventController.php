@@ -310,6 +310,61 @@ class EventController extends MyBaseController
         ]);
     }
 
+
+    /**
+     * Delete an event
+     *
+     * @param Request $request
+     * @param $event_id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function postDeleteEvent(Request $request, $event_id)
+    {
+        $event = Event::scope()->findOrFail($event_id);
+//
+//        if (!$event->validate($request->all())) {
+//            return response()->json([
+//                'status'   => 'error',
+//                'messages' => $event->errors(),
+//            ]);
+//        }
+
+        try {
+            $event->delete();
+        } catch (\Exception $exception) {
+            Log::error($exception);
+
+            return response()->json([
+                'status'      => 'error',
+                'id'          => $event->id,
+                'message'     => trans("Controllers.whoops"),
+                'redirectUrl' => '',
+            ]);
+        }
+
+        return response()->json([
+            'status'      => 'success',
+            'id'          => $event->id,
+            'message'     => trans("Controllers.event_successfully_deleted"),
+            'redirectUrl' => '',
+        ]);
+    }
+
+    /**
+     * Show the delete event modal
+     *
+     * @param $event_id
+     * @return mixed
+     */
+    public function showDeleteEvent($event_id)
+    {
+        $data = [
+            'event'  => Event::scope()->find($event_id)
+        ];
+
+        return view('ManageEvent.Modals.DeleteEvent', $data);
+    }
+
     /**
      * Upload event image
      *

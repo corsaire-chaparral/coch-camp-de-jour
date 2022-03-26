@@ -29,7 +29,7 @@
         <div class="btn-toolbar" role="toolbar">
             <div class="btn-group btn-group btn-group-responsive">
 
-                <button class="loadModal btn btn-success" type="button" data-modal-id="CreateQuestion"
+                <button class="loadModal btn btn-primary" type="button" data-modal-id="CreateQuestion"
                         href="javascript:void(0);"
                         data-href="{{route('showCreateEventQuestion', ['event_id' => $event->id])}}">
                     <i class="ico-question"></i> @lang("Surveys.add_question")
@@ -37,7 +37,7 @@
             </div>
 
             <div class="btn-group btn-group btn-group-responsive">
-                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                     <i class="ico-users"></i> @lang("Surveys.export_answers") <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">

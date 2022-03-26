@@ -509,6 +509,19 @@ Route::group(
 
             /*
              * -------
+             * Delete Event
+             * -------
+             */
+            Route::post('{event_id}/delete',
+                [EventController::class, 'postDeleteEvent']
+            )->name('postDeleteEvent');
+            Route::get('{event_id}/delete',
+                [EventController::class, 'showDeleteEvent']
+            )->name('showDeleteEvent');
+
+
+            /*
+             * -------
              * Customize Design etc.
              * -------
              */

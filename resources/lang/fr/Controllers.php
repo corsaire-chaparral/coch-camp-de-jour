@@ -62,6 +62,7 @@ return array (
 	),
     'event_create_exception' => 'Aïe ! Il y a eu un problème lors de la création de votre événement, merci de réessayer.',
     'event_page_successfully_updated' => 'Page d\'événement mise à jour avec succès.',
+    'event_successfully_deleted' => 'Événement supprimé avec succès !',
     'event_successfully_updated' => 'Événement mis à jour avec succès !',
     'fill_email_and_password' => 'Merci de saisir votre courriel et votre mot de passe',
     'image_upload_error' => 'Il y a eu un problème lors de l\'envoi de votre image.',

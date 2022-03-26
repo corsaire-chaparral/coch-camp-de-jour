@@ -42,7 +42,7 @@
 @yield('pre_header')
 <header id="header" class="navbar">
     <div class="navbar-header">
-        <a class="navbar-brand" href="javascript:void(0);">
+        <a class="navbar-brand" href="/">
             <img class="logo-figure" alt="Club d’athlétisme Corsaire-Chaparral" src="{{asset('assets/images/logo-light.png')}}"/>
         </a>
     </div>
