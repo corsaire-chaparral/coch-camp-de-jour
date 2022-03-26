@@ -30,7 +30,7 @@
                                         </small>
                                     </p>
                                 </td>
-                                <td style="width:150px; text-align: right;">
+                                <td style="width:180px; text-align: right;">
                                     <div class="ticket-pricing" style="margin-right: 20px;">
                                         @if($ticket->is_free)
                                             @lang("Public_ViewEvent.free")
@@ -40,7 +40,8 @@
                                             $is_free_event = false;
                                             ?>
                                             <span title='{{money($ticket->price, $event->currency)}} @lang("Public_ViewEvent.ticket_price") + {{money($ticket->total_booking_fee, $event->currency)}} @lang("Public_ViewEvent.booking_fees")'>{{money($ticket->total_price, $event->currency)}} </span>
-                                            <span class="tax-amount text-muted text-smaller">{{ ($event->organiser->tax_name && $event->organiser->tax_value) ? '(+'.money(($ticket->total_price*($event->organiser->tax_value)/100), $event->currency).' '.$event->organiser->tax_name.')' : '' }}</span>
+                                            <br>
+                                            <span class="tax-amount text-muted text-smaller">{{ ($event->organiser->tax_name && $event->organiser->tax_value) ? '(+'.' '.$event->organiser->tax_name.' '.money(($ticket->total_price*($event->organiser->tax_value)/100), $event->currency).')' : '' }}</span>
                                             <meta property="priceCurrency"
                                                   content="{{ $event->currency->code }}">
                                             <meta property="price"

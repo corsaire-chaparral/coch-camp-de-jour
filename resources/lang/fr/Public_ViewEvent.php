@@ -17,12 +17,12 @@ return array (
   'attendee_cancelled' => 'Annulé',
   'below_order_details_header' => '',
   'below_payment_information_header' => '',
-  'below_tickets' => 'Sélectionnez le nombre d\'inscriptions et cliquez sur «suivant». Vous pourrez indiquer le nom de l\'enfant et effectuer le paiement à l\'écran suivant.', // «suivant» => register
+  'below_tickets' => 'Vous pourrez indiquer le nom de l\'enfant pour chaque inscription à l\'écran suivant.', // «suivant» => register
   'booking_fee' => 'Frais',
   'booking_fees' => 'Frais',
   // 'business_details' => ''
   'card_number' => 'Numéro de carte',
-  'checkout_order' => 'Poursuivre vers le paiement',
+  'checkout_order' => 'Continuer vers le paiement',
   'checkout_submit' => 'Placer la commande',
   'confirmation_email' => 'ainsi qu\'un message de confirmation vous ont été envoyés par courriel.',
   'copy_buyer' => 'Copier les détails de l\'acheteur pour tous ceux qui ont des inscriptions',

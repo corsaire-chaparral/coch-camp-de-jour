@@ -104,17 +104,21 @@
                             {{-- Special untranslated text (camp de jour) --}}
                             <p class="help-block">Veuillez indiquer le prénom et nom de l’enfant pour chaque inscription.</p>
 
-                            <p class="help-block">
-                                Vous pouvez copier les détails du 1er enfant vers toutes les autres semaines.
-                                <br>
-                                <a href="javascript:void(0);" class="btn btn-primary btn-xs" id="mirror_buyer_info">
-                                    <i class="ico-copy"></i> Copier
-                                </a>
-                            </p>
                             <?php
                                 $total_attendee_increment = 0;
                             ?>
                             @foreach($tickets as $ticket)
+
+                                @if($loop->index === 1)
+                                    <p class="alert alert-info">
+                                        Si vous inscrivez le même enfant pour plusieurs semaines, vous pouvez copier ses détails vers les autres semaines.
+                                        <br>
+                                        <br>
+                                        <a href="javascript:void(0);" class="btn btn-primary" id="mirror_buyer_info">
+                                            <i class="ico-copy"></i> Copier
+                                        </a>
+                                    </p>
+                                @endif
 
                                 <div class="panel panel-default">
 
