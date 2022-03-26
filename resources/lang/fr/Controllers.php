@@ -27,7 +27,7 @@ return array (
     'attendee_successfully_checked_in' => 'Participant enregistré avec succès',
     'attendee_successfully_checked_out' => 'Participant ',
     'attendee_successfully_invited' => 'Participant invité avec succès !',
-    'cant_delete_ticket_when_sold' => 'Désolé, vous ne pouvez pas supprimer cette inscription car quelques-unes ont déjà été vendues',
+    'cant_delete_ticket_when_sold' => 'Désolé, vous ne pouvez pas supprimer cette inscription car il y a déjà eu des ventes.',
     'check_in_all_tickets' => 'Enregistrer toutes les inscriptions associés à cette commande',
     'confirmation_malformed' => 'Le code de confirmation manque ou il est mal formé.',
     'confirmation_successful' => 'Ça a marché ! Votre courriel est désormais vérifié.  Vous pouvez vous connecter.',
