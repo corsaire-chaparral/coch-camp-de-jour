@@ -1,11 +1,13 @@
 @extends('en.Emails.Layouts.Master')
 
 @section('message_content')
-Hello {{$attendee->first_name}},<br><br>
+Bonjour {{$attendee->first_name}},<br><br>
 
-You have been invited to the event  <b>{{$attendee->order->event->title}}</b>.<br/>
-Your ticket for the event is attached to this email.
+Vous avez été invité(e) à l’événement suivant : <b>{{$attendee->order->event->title}}</b>.<br/>
 
 <br><br>
-Regards
+Merci,
+<br><br>
+
+<em>L’équipe du Corsaire-Chaparral</em>
 @stop

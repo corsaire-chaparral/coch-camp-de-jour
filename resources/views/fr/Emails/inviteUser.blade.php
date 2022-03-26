@@ -9,7 +9,7 @@
 
 <p>
     Vous pouvez vous connecter avec les informations ci-dessous.<br><br>
-    
+
     Utilisateur : <b>{{$user->email}}</b> <br>
     Mot de passe : <b>{{$temp_password}}</b>
 </p>
@@ -23,11 +23,15 @@
 </div>
 <br><br>
 <p>
-    Si vous avez la moindre question, merci de répondre à ce message.
+    Pour toute question, n’hésitez pas à répondre à ce messsage.
 </p>
 <p>
-    Merci
+    Merci,
 </p>
+
+    <p>
+        <em>L’équipe du Corsaire-Chaparral</em>
+    </p>
 
 @stop
 

@@ -53,7 +53,7 @@
                         <td align="center" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;font-size: 100%;line-height: 1.6">
                             {{--Attendize is provided free of charge on the condition the below hyperlink is left in place.--}}
                             {{--See https://www.attendize.com/license.html for more information.--}}
-                            <p style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;font-size: 14px;line-height: 1.6;color: #666;margin-bottom: 10px;font-weight: normal">Powered By <a href="https://www.attendize.com/?email_footer_powered_by" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;font-size: 100%;line-height: 1.6;color: #999">Attendize.com</a> | Admin By <a href="mailto:louis@corsaire-chaparral.org">Louis-Olivier Brassard</a>
+                            <p style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;font-size: 14px;line-height: 1.6;color: #666;margin-bottom: 10px;font-weight: normal"><a href="https://www.attendize.com/?email_footer_powered_by" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;font-size: 100%;line-height: 1.6;color: #999">Attendize</a> Corsaire-Chaparral | Administration par <a href="mailto:louis@corsaire-chaparral.org">Louis-Olivier Brassard</a>
                             </p>
                             @yield('footer')
                         </td>
