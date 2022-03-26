@@ -137,7 +137,7 @@ class EventTicketsController extends MyBaseController
             }
         }
 
-        session()->flash('message', 'Successfully Created Ticket');
+        session()->flash('message', trans('ManageEvent.event_created'));
 
         return response()->json([
             'status'      => 'success',

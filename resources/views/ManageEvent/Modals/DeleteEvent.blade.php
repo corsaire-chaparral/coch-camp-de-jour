@@ -1,5 +1,5 @@
 <div role="dialog"  class="modal fade " style="display: none;">
-    {!! Form::model($event, ['url' => route('postDeleteEvent', ['event_id' => $event->id]), 'class' => 'ajax']) !!}
+    {!! Form::model($event, ['url' => route('postDeleteEvent', ['event_id' => $event->id]), 'class' => 'ajax gf closeModalAfter']) !!}
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header text-center">

@@ -34,6 +34,7 @@ return array (
   'edit_question' => 'Edit Question',
   'edit_ticket' => 'Edit Ticket',
   'end_sale_on' => 'End Sale On',
+  'event_created' => 'Successfully Created Ticket',
   'event_not_live' => 'This event is not visible to the public.',
   'event_page' => 'Event Page',
   'event_tools' => 'Event Tools',

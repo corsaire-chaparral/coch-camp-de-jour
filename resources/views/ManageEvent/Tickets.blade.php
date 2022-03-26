@@ -226,7 +226,7 @@
                                     data-href="{{ route('showDeleteTicket', ['event_id' => $event->id, 'ticket_id' => $ticket->id]) }}"
                             >
                                 <i title="@lang("Ticket.basic.delete")"
-                                   class="ico-cancel-circle"></i>
+                                   class="ico-trash"></i>
                                 &#32;&#32;
                                 @lang("basic.delete")
                             </button>

@@ -25,6 +25,7 @@ return array (
   'close' => 'fermer',
   'confirm_cancel' => 'Confirmer l\'annulation du participant',
   'confirm_order_cancel' => 'Confirmer l\'annulation de la commande',
+  'event_created' => 'Événement créé avec succès!',
   'create_attendees' => 'Créer les participants',
   'create_ticket' => 'Créer l\'inscription',
   'download_pdf_ticket' => 'Télécharger l\'inscription PDF',
