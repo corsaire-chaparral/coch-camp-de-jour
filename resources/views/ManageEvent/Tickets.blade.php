@@ -134,7 +134,8 @@
 
                                 <span class="muted" style="opacity: .35; pointer-events: none; margin: 0 .5rem;">|</span>
 
-                                @if($ticket->sale_status === config('attendize.ticket_status_on_sale'))
+                                {{-- ticket_status_on_sale is on sale (for future) and ticket_status_off_sale is currently on sale --}}
+                                @if($ticket->sale_status === config('attendize.ticket_status_on_sale') || $ticket->sale_status === config('attendize.ticket_status_off_sale'))
                                     @if($ticket->is_paused)
                                         <span class="label label-warning">
                                             <i class="ico-warning"></i>

@@ -321,13 +321,6 @@ class EventController extends MyBaseController
     public function postDeleteEvent(Request $request, $event_id)
     {
         $event = Event::scope()->findOrFail($event_id);
-//
-//        if (!$event->validate($request->all())) {
-//            return response()->json([
-//                'status'   => 'error',
-//                'messages' => $event->errors(),
-//            ]);
-//        }
 
         try {
             $event->delete();
@@ -342,11 +335,15 @@ class EventController extends MyBaseController
             ]);
         }
 
+        session()->flash('message', trans('Controllers.event_successfully_deleted'));
+
         return response()->json([
             'status'      => 'success',
             'id'          => $event->id,
-            'message'     => trans("Controllers.event_successfully_deleted"),
-            'redirectUrl' => '',
+            'message'     => trans("Controllers.refreshing"),
+            'redirectUrl' => route('showOrganiserEvents', [
+                'organiser_id' => $event->organiser_id,
+            ]),
         ]);
     }
 

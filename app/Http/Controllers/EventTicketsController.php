@@ -206,10 +206,15 @@ class EventTicketsController extends MyBaseController
         }
 
         if ($ticket->delete()) {
+            session()->flash('message', trans('Controllers.ticket_successfully_deleted'));
+
             return response()->json([
                 'status'  => 'success',
-                'message' => trans("Controllers.ticket_successfully_deleted"),
+                'message' => trans("Controllers.refreshing"),
                 'id'      => $ticket->id,
+                'redirectUrl' => route('showEventTickets', [
+                    'event_id' => $ticket->event_id,
+                ]),
             ]);
         }
 
