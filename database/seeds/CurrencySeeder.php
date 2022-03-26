@@ -27,7 +27,7 @@ class CurrencySeeder extends Seeder
             ],
             // Pour affichage en français, avec la virgule et le symbole à droite
             [
-                'id' => 1,
+                'id' => 37,
                 'title' => 'Dollar canadien',
                 'symbol_left' => '',
                 'symbol_right' => '$',
