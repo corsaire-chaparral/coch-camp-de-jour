@@ -140,12 +140,13 @@
                                 {{-- ticket_status_on_sale is on sale (for future) and ticket_status_off_sale is currently on sale --}}
                                 @if($ticket->sale_status === config('attendize.ticket_status_on_sale') || $ticket->sale_status === config('attendize.ticket_status_off_sale'))
                                     @if($ticket->is_paused)
-                                        <span class="label label-warning">
-                                            <i class="ico-warning"></i>
+                                        <span class="label label-default">
+                                            <span class="status status-warning"></span>
                                             @lang("Ticket.ticket_sales_paused")
                                         </span>
                                     @else
-                                        <span class="label label-success">
+                                        <span class="label label-default">
+                                            <span class="status status-success"></span>
                                             @lang("Ticket.on_sale")
                                         </span>
                                     @endif
@@ -199,42 +200,42 @@
                         </div>
                         <div class="panel-footer" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 4px; justify-content: flex-end;">
 
-                            <button class="btn btn-sm btn-default loadModal"
-                                    data-modal-id='ticket-{{ $ticket->id }}'
-                                    data-href="{{ route('showEditTicket', ['event_id' => $event->id, 'ticket_id' => $ticket->id]) }}"
-                            >
-                                <i title="@lang("Ticket.basic.edit")"
-                                   class="ico-pencil"></i>
-                                &#32;&#32;
-                                @lang("basic.edit")
-                            </button>
+                            <div class="btn-group" role="group">
 
-                            {{-- ticket_status_on_sale is on sale (for future) and ticket_status_off_sale is currently on sale --}}
-                            @if($ticket->sale_status === config('attendize.ticket_status_on_sale') || $ticket->sale_status === config('attendize.ticket_status_off_sale'))
-                                @if($ticket->is_paused)
-                                    <span class="pauseTicketSales btn btn-sm btn-success"
-                                          data-id="{{$ticket->id}}"
-                                          data-route="{{route('postPauseTicket', ['event_id'=>$event->id])}}">
-                                        <i class="ico-play4"></i> @lang("Ticket.resume")
-                                    </span>
-                                @else
-                                    <span class="pauseTicketSales btn btn-sm btn-warning"
-                                          data-id="{{$ticket->id}}"
-                                          data-route="{{route('postPauseTicket', ['event_id'=>$event->id])}}">
-                                <i class="ico-pause"></i> @lang("Ticket.pause")
-                            </span>
+                                {{-- ticket_status_on_sale is on sale (for future) and ticket_status_off_sale is currently on sale --}}
+                                @if($ticket->sale_status === config('attendize.ticket_status_on_sale') || $ticket->sale_status === config('attendize.ticket_status_off_sale'))
+                                    @if($ticket->is_paused)
+                                        <button
+                                            class="pauseTicketSales btn btn-default"
+                                            data-id="{{$ticket->id}}"
+                                            data-route="{{route('postPauseTicket', ['event_id'=>$event->id])}}"
+                                        ><i class="ico-play4"></i>
+                                    </button>
+                                    @else
+                                        <button class="pauseTicketSales btn btn-default"
+                                              data-id="{{$ticket->id}}"
+                                              data-route="{{route('postPauseTicket', ['event_id'=>$event->id])}}">
+                                            <i class="ico-pause" title="@lang('Ticket.pause')"></i>
+                                        </button>
+                                    @endif
                                 @endif
-                            @endif
 
-                            <button class="btn btn-sm btn-danger loadModal"
-                                    data-modal-id='ticket-{{ $ticket->id }}'
-                                    data-href="{{ route('showDeleteTicket', ['event_id' => $event->id, 'ticket_id' => $ticket->id]) }}"
-                            >
-                                <i title="@lang("Ticket.basic.delete")"
-                                   class="ico-trash"></i>
-                                &#32;&#32;
-                                @lang("basic.delete")
-                            </button>
+                                <button class="btn btn-default loadModal"
+                                        data-modal-id='ticket-{{ $ticket->id }}'
+                                        data-href="{{ route('showEditTicket', ['event_id' => $event->id, 'ticket_id' => $ticket->id]) }}"
+                                ><i title="@lang("basic.edit")"
+                                    class="ico-pencil"></i>
+                                    <span>@lang("basic.edit")</span>
+                                </button>
+
+                                <button class="btn btn-danger loadModal"
+                                        data-modal-id='ticket-{{ $ticket->id }}'
+                                        data-href="{{ route('showDeleteTicket', ['event_id' => $event->id, 'ticket_id' => $ticket->id]) }}"
+                                >
+                                    <i title="@lang("basic.delete")"
+                                       class="ico-trash"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

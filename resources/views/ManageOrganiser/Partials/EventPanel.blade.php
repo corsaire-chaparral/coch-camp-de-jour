@@ -26,12 +26,12 @@
 
         @if(!$event->is_live)
             <span class="label label-default" title="{{ @trans("ManageEvent.event_not_live") }}">
-                <i class="ico-eye-close"></i>
+                <span class="status status-neutral"></span>
                 @lang('basic.offline')
             </span>
         @else
-            <span class="label label-success">
-                <i class="ico-eye"></i>
+            <span class="label label-default">
+                <span class="status status-success"></span>
                 @lang('basic.online')
             </span>
         @endif
