@@ -28,6 +28,7 @@ return array (
   'event_created' => 'Événement créé avec succès!',
   'create_attendees' => 'Créer les participants',
   'create_ticket' => 'Créer l\'inscription',
+  'default_currency' => 'Devise par défaut',
   'download_pdf_ticket' => 'Télécharger l\'inscription PDF',
   'edit_attendee' => 'Éditer le participant',
   'edit_attendee_title' => 'Éditer :attendee',

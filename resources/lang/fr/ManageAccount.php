@@ -1,6 +1,6 @@
 <?php
 /*************************************************************************
- Generated via "php artisan localization:missing" at 2018/04/13 13:27:24 
+ Generated via "php artisan localization:missing" at 2018/04/13 13:27:24
 *************************************************************************/
 
 return array (
@@ -16,10 +16,10 @@ return array (
   'branding_name' => 'Nom de marque',
   'branding_name_help' => 'C\'est le nom que les clients verront en s\'enregistrant. Laissez vide si vous voulez utiliser le nom de l\'organisateur de l\'événement.',
   'coinbase_settings' => 'Paramètres Coinbase',
-  'default_currency' => 'Monnaie par défaut',
+  'default_currency' => 'Devise par défaut',
   'default_payment_gateway' => 'Passerelle de paiement par défaut',
   'email' => 'Courriel',
-  'email_address_placeholder' => 'Adresse de courriel',
+  'email_address_placeholder' => 'Adresse courriel',
   'first_name' => 'Prénom',
   'general' => 'Général',
   'last_name' => 'Nom',
